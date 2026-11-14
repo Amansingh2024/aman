@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0C2340">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Sen Diagnostics">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Health Packages | 3D Flip-Flop Health Profiles | Sen Diagnostics Patna</title>
+  
+  <meta name="description" content="Explore comprehensive health packages at Sen Diagnostics: Sen 360 Health Profile, Cardiac panels, Diabetes monitoring, PCOD profiles, and pre-op checkups with 3D Flip cards.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- TOP HEADER BAR -->
+  <div class="top-clinical-bar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="top-bar-flex">
+        <div class="flex items-center gap-4">
+          <button type="button" class="open-holiday-modal text-xs font-semibold text-orange-400 bg-orange-950/60 border border-orange-500/30 px-3 py-1 rounded-full hover:bg-orange-600 hover:text-white transition-all">
+            <i class="far fa-calendar-alt mr-1"></i> List of Holidays 2026
+          </button>
+        </div>
+        <div class="flex items-center gap-6 text-xs sm:text-sm">
+          <a href="tel:+917481953528" class="top-bar-item font-medium"><i class="fas fa-phone-alt"></i> +91 74819 53528</a>
+          <a href="https://wa.me/917481955502" target="_blank" class="top-bar-item font-medium"><i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp: +91 74819 55502</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="hospital-nav">
+    <div class="nav-container-flex">
+      <a href="index.html" class="hospital-brand">
+        <div class="brand-icon-box"><i class="fas fa-heartbeat"></i></div>
+        <div class="brand-title-wrap">
+          <div class="brand-main-title">SEN <span>DIAGNOSTICS</span></div>
+          <div class="brand-sub-title">Since 1965 • Three Generations</div>
+        </div>
+      </a>
+      <nav>
+        <ul class="nav-links-menu">
+          <li><a href="index.html" class="nav-link-btn">Home</a></li>
+          <li><a href="about.html" class="nav-link-btn">About Us</a></li>
+          <li><a href="packages.html" class="nav-link-btn active">Health Packages</a></li>
+          <li><a href="test-list.html" class="nav-link-btn">Test Directory</a></li>
+          <li><a href="center-facility.html" class="nav-link-btn">Center Facility</a></li>
+          <li><a href="contact-us.html" class="nav-link-btn">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button class="btn-hospital-orange text-sm hidden sm:inline-flex" onclick="openBookingModal('Sen 360 Health Profile (with Urine)', 4800)">
+          <i class="fas fa-calendar-check mr-1"></i> Book Home Collection
+        </button>
+        <button id="mobile-nav-toggle" class="md:hidden p-2 text-gray-800"><i class="fas fa-bars text-xl"></i></button>
+      </div>
+    </div>
+    <div id="mobile-menu-drawer" class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-4 shadow-xl">
+      <div class="flex flex-col gap-3 font-semibold text-gray-700">
+        <a href="index.html" class="py-1">Home</a>
+        <a href="about.html" class="py-1">About Us</a>
+        <a href="packages.html" class="text-sky-600 py-1">Health Packages</a>
+        <a href="test-list.html" class="py-1">Test Directory</a>
+        <a href="center-facility.html" class="py-1">Center Facility</a>
+        <a href="contact-us.html" class="py-1">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- INNER PAGE HERO -->
+  <section class="inner-page-hero text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right text-[10px]"></i>
+        <span>Health Packages</span>
+      </div>
+      <h1>Complete <span class="text-orange-500">Health Checkup Packages</span></h1>
+      <p class="mb-4">
+        Preventive diagnostic wellness panels designed by pathologists. Hover, tilt, or click any package card to experience the <strong>3D Flip-Flop Effect</strong> and inspect individual tests.
+      </p>
+      <div class="inline-flex items-center flex-wrap justify-center gap-3 text-xs font-semibold text-gray-300 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full shadow-sm">
+        <span><i class="fas fa-hand-pointer text-orange-400 mr-1"></i> Click / Tap Card</span>
+        <span class="text-gray-500 hidden sm:inline">&bull;</span>
+        <span><i class="fas fa-arrows-left-right text-sky-400 mr-1"></i> Swipe on Touch</span>
+        <span class="text-gray-500 hidden sm:inline">&bull;</span>
+        <span><i class="fas fa-cube text-emerald-400 mr-1"></i> 3D Mouse Tilt</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES SHOWCASE WITH 3D FLIP-FLOP -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Filter Tabs -->
+      <div class="flex justify-center flex-wrap gap-2.5 mb-14">
+        <button class="tab-filter-package bg-[#F37021] text-white border-[#F37021] shadow-md px-5 py-2 rounded-full text-xs font-bold transition-all" data-filter="all">All Packages</button>
+        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-5 py-2 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="wellness">Wellness Profiles</button>
+        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-5 py-2 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="cardiac">Cardiac Health</button>
+        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-5 py-2 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="diabetes">Diabetes & Sugar</button>
+        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-5 py-2 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="women">Women's Health</button>
+        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-5 py-2 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="specialized">Surgical & Hematology</button>
+      </div>
+
+      <!-- 12 3D Flip Cards Grid (Full HD Content) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- 1. Sen 360 Health Profile -->
+        <div class="flip-card-3d-wrap" data-category="wellness">
+          <div class="flip-card-3d-inner">
+            <div class="flip-card-3d-front">
+              <div>
+                <div class="card-top-row">
+                  <span class="badge-clinical badge-wellness">Wellness Package</span>
+                  <span class="flip-flop-indicator"><i class="fas fa-sync-alt"></i> Flip for All Tests</span>
+                </div>
+                <h3 class="card-package-title">Sen 360 Health Profile (with Urine)</h3>
+                <p class="card-package-description">
+                  Exhaustive full-body screening covering 80+ essential biomarkers for heart, liver, kidney, diabetes, thyroid, vitamins, inflammation, and microvascular urine analysis.
+                </p>
+                <div class="card-specs-strip">
+                  <div class="spec-strip-box">
+                    <span class="lbl">Report Delivery</span>
+                    <span class="val">Same Day</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Fasting Diet</span>
+                    <span class="val">10-12h Fasting</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Test Scope</span>
+                    <span class="val">80+ Parameters</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Package Tariff</div>
+                  <div class="price-text-large">₹4,800</div>
+                </div>
+                <button type="button" class="btn-trigger-flip">
+                  View Full Tests <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flip-card-3d-back">
+              <div class="back-face-header">
+                <div>
+                  <h4>Sen 360 Exhaustive Checklist</h4>
+                  <span>80+ Parameters Included &bull; Same Day Report</span>
+                </div>
+              </div>
+              <div class="back-test-scroll-area">
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-tint"></i> Complete Hemogram / CBC (25 Parameters)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Hemoglobin (Hb) &amp; Total RBC Count</strong> <span class="param-tag">Anemia Screen</span></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Total Leucocyte Count (TLC / WBC)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>5-Part Differential:</strong> Neutrophils, Lymphocytes, Monocytes, Eosinophils, Basophils (% &amp; Absolute)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Red Cell Indices:</strong> PCV/Hematocrit, MCV, MCH, MCHC, RDW-CV, RDW-SD</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Platelet Profile:</strong> Total Platelet Count, MPV, PDW, Plateletcrit (PCT)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Peripheral Blood Smear</strong> (Cell Morphology by Pathologist)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-cube"></i> Diabetes &amp; Glycemic Profile (3 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Fasting Blood Glucose (FBG)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Glycated Hemoglobin (HbA1c by HPLC)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Estimated Average Glucose (eAG)</strong></li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-flask"></i> Liver Function Test / LFT (11 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Bilirubin Profile:</strong> Total, Direct (Conjugated), Indirect (Unconjugated)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Hepatic Enzymes:</strong> SGPT (ALT), SGOT (AST), Alkaline Phosphatase (ALP), GGTP</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Proteins:</strong> Total Serum Protein, Albumin, Globulin, A:G Ratio</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-filter"></i> Kidney Function Test / KFT (7 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Renal Biomarkers:</strong> Blood Urea Nitrogen (BUN), Serum Urea, Serum Creatinine, Uric Acid</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Serum Electrolytes:</strong> Sodium (Na+), Potassium (K+), Chloride (Cl-)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-heartbeat"></i> Complete Lipid Profile (8 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Cholesterol Fractions:</strong> Total Cholesterol, Direct HDL (Good), Direct LDL (Bad), VLDL</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Serum Triglycerides &amp; Non-HDL Cholesterol</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Atherogenic Ratios:</strong> Chol:HDL Ratio &amp; LDL:HDL Ratio</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-dna"></i> Thyroid, Vitamins &amp; Inflammation (4 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>TSH 3rd Gen Ultrasensitive</strong> (Thyroid Stimulating Hormone)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>25-OH Vitamin D Total</strong> (Bone Density &amp; Immunity)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Vitamin B12 Quantitative</strong> (Nerve Conduction &amp; RBC)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>High-Sensitivity hs-CRP</strong> (Vascular Plaque Inflammation)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-vial"></i> Comprehensive Urine Analysis &amp; ACR (20+ Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Urine Albumin:Creatinine Ratio (ACR)</strong> <span class="param-tag">Early Nephropathy</span></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Urine Physical &amp; Chemical:</strong> Protein, Glucose, Ketones, Bilirubin, Urobilinogen, Nitrite, pH, Specific Gravity</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Urine Microscopy:</strong> Pus Cells, RBCs, Epithelial Cells, Casts, Crystals, Bacteria</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="back-action-bar">
+                <button type="button" class="btn-hospital-orange text-xs flex-1 justify-center py-2.5 font-bold shadow-md" onclick="openBookingModal('Sen 360 Health Profile (with Urine)', 4800)">
+                  <i class="fas fa-calendar-check mr-1.5"></i> Book Package
+                </button>
+                <button type="button" class="btn-flip-back" title="Flip back to package details">
+                  <i class="fas fa-undo text-orange-400"></i> Flip Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Complete Health Checkup -->
+        <div class="flip-card-3d-wrap" data-category="wellness">
+          <div class="flip-card-3d-inner">
+            <div class="flip-card-3d-front">
+              <div>
+                <div class="card-top-row">
+                  <span class="badge-clinical badge-wellness">Wellness Package</span>
+                  <span class="flip-flop-indicator"><i class="fas fa-sync-alt"></i> Flip for All Tests</span>
+                </div>
+                <h3 class="card-package-title">Complete Health Checkup</h3>
+                <p class="card-package-description">
+                  Covers heart, kidney, liver health along with diabetes screening and nutritional deficiency screening for complete peace of mind.
+                </p>
+                <div class="card-specs-strip">
+                  <div class="spec-strip-box">
+                    <span class="lbl">Report Delivery</span>
+                    <span class="val">Same Day</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Fasting Diet</span>
+                    <span class="val">10-12h Fasting</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Test Scope</span>
+                    <span class="val">55+ Parameters</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Package Tariff</div>
+                  <div class="price-text-large">₹4,500</div>
+                </div>
+                <button type="button" class="btn-trigger-flip">
+                  View Full Tests <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flip-card-3d-back">
+              <div class="back-face-header">
+                <div>
+                  <h4>Complete Health Investigation</h4>
+                  <span>55+ Vital Parameters &bull; Same Day Report</span>
+                </div>
+              </div>
+              <div class="back-test-scroll-area">
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-tint"></i> Complete Hemogram (CBC - 25 Parameters)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Hemoglobin, RBC Count &amp; PCV Hematocrit</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Total Leucocyte Count (TLC) &amp; 5-Part Differential</strong> (Neutrophils, Lymphocytes, Monocytes, Eosinophils, Basophils)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>RBC Indices:</strong> MCV, MCH, MCHC, RDW-CV, RDW-SD</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Platelet Profile:</strong> Platelet Count, MPV &amp; Peripheral Smear Review</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-cube"></i> Glycemic Health (3 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Fasting Blood Glucose (FBS)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Glycated Hemoglobin (HbA1c by HPLC)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Estimated Average Glucose (eAG)</strong></li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-flask"></i> Liver Function Panel (11 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Bilirubin:</strong> Total, Direct &amp; Indirect</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Enzymes:</strong> SGPT (ALT), SGOT (AST), Alkaline Phosphatase (ALP)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Proteins:</strong> Total Protein, Albumin, Globulin, A:G Ratio</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-filter"></i> Kidney Function Panel (7 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Renal Profile:</strong> Blood Urea, BUN, Serum Creatinine, Uric Acid</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Electrolytes:</strong> Sodium (Na+), Potassium (K+), Chloride (Cl-)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-heartbeat"></i> Lipid Profile Panel (8 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Fractions:</strong> Total Cholesterol, Direct HDL, Direct LDL, VLDL, Triglycerides</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Ratios:</strong> Non-HDL Cholesterol, Chol:HDL Ratio, LDL:HDL Ratio</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-dna"></i> Inflammation &amp; Vitamins (4 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>C-Reactive Protein (CRP Quantitative)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>TSH 3rd Gen Ultrasensitive</strong> (Thyroid)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>25-OH Vitamin D Total &amp; Vitamin B12</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="back-action-bar">
+                <button type="button" class="btn-hospital-orange text-xs flex-1 justify-center py-2.5 font-bold shadow-md" onclick="openBookingModal('Complete Health Checkup', 4500)">
+                  <i class="fas fa-calendar-check mr-1.5"></i> Book Package
+                </button>
+                <button type="button" class="btn-flip-back" title="Flip back to package details">
+                  <i class="fas fa-undo text-orange-400"></i> Flip Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Advanced Cardiac Panel -->
+        <div class="flip-card-3d-wrap" data-category="cardiac">
+          <div class="flip-card-3d-inner">
+            <div class="flip-card-3d-front">
+              <div>
+                <div class="card-top-row">
+                  <span class="badge-clinical badge-cardiac">Cardiac Health</span>
+                  <span class="flip-flop-indicator"><i class="fas fa-sync-alt"></i> Flip for All Tests</span>
+                </div>
+                <h3 class="card-package-title">Advanced Cardiac Panel</h3>
+                <p class="card-package-description">
+                  Comprehensive cardiovascular risk, arterial plaque vulnerability, and early heart failure assessment using NT-proBNP and Lipoprotein (a).
+                </p>
+                <div class="card-specs-strip">
+                  <div class="spec-strip-box">
+                    <span class="lbl">Report Delivery</span>
+                    <span class="val">Same Day</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Fasting Diet</span>
+                    <span class="val">12h Fasting</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Biomarker</span>
+                    <span class="val">NT-proBNP</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Specialist Tariff</div>
+                  <div class="price-text-large">₹5,500</div>
+                </div>
+                <button type="button" class="btn-trigger-flip">
+                  View Full Tests <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flip-card-3d-back">
+              <div class="back-face-header">
+                <div>
+                  <h4>Cardiac Biomarkers Checklist</h4>
+                  <span>Precision Cardiology &bull; Plaque & Strain</span>
+                </div>
+              </div>
+              <div class="back-test-scroll-area">
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-wave-square"></i> Myocardial Wall Stress &amp; Heart Strain</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>NT-proBNP Quantitative</strong> <span class="param-tag">Gold Standard</span> (Early Ventricular Overload &amp; Heart Failure Biomarker)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-dna"></i> Atherogenic Apolipoproteins &amp; Burden</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Apolipoprotein A1 (Apo A1)</strong> (Cardioprotective HDL Particle Carrier)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Apolipoprotein B (Apo B)</strong> (Atherogenic Plaque Particle Count)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Apo B / Apo A1 Ratio</strong> (Superior Predictor of Myocardial Infarction)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-biohazard"></i> Genetic &amp; Vascular Risk Biomarkers</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Lipoprotein (a) [Lp(a)] Quantitative</strong> (Independent Hereditary Plaque Factor)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Cardiac High-Sensitivity hs-CRP</strong> (Endothelial Micro-Vascular Inflammation)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Serum Homocysteine Quantitative</strong> (Thrombosis &amp; Vascular Wall Injury Risk)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-heart"></i> Comprehensive Lipid Panel (8 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Total Cholesterol &amp; Serum Triglycerides</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Direct HDL Cholesterol &amp; Direct LDL Cholesterol</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>VLDL, Non-HDL Cholesterol, Chol:HDL &amp; LDL:HDL Ratios</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="back-action-bar">
+                <button type="button" class="btn-hospital-orange text-xs flex-1 justify-center py-2.5 font-bold shadow-md" onclick="openBookingModal('Advanced Cardiac Panel', 5500)">
+                  <i class="fas fa-calendar-check mr-1.5"></i> Book Package
+                </button>
+                <button type="button" class="btn-flip-back" title="Flip back to package details">
+                  <i class="fas fa-undo text-orange-400"></i> Flip Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Basic Cardiac Screen -->
+        <div class="flip-card-3d-wrap" data-category="cardiac">
+          <div class="flip-card-3d-inner">
+            <div class="flip-card-3d-front">
+              <div>
+                <div class="card-top-row">
+                  <span class="badge-clinical badge-cardiac">Cardiac Health</span>
+                  <span class="flip-flop-indicator"><i class="fas fa-sync-alt"></i> Flip for All Tests</span>
+                </div>
+                <h3 class="card-package-title">Basic Cardiac Screen</h3>
+                <p class="card-package-description">
+                  Ideal for first-time heart risk assessment and routine cardiac screening with essential cholesterol subfractions and inflammatory markers.
+                </p>
+                <div class="card-specs-strip">
+                  <div class="spec-strip-box">
+                    <span class="lbl">Report Delivery</span>
+                    <span class="val">Same Day</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Fasting Diet</span>
+                    <span class="val">12h Fasting</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Key Focus</span>
+                    <span class="val">Apo &amp; hs-CRP</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Screening Tariff</div>
+                  <div class="price-text-large">₹2,500</div>
+                </div>
+                <button type="button" class="btn-trigger-flip">
+                  View Full Tests <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flip-card-3d-back">
+              <div class="back-face-header">
+                <div>
+                  <h4>Basic Cardiac Screen Scope</h4>
+                  <span>Early Heart Risk &bull; Same Day Report</span>
+                </div>
+              </div>
+              <div class="back-test-scroll-area">
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-dna"></i> Atherogenic Protein Markers (3 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Apolipoprotein A1 (Apo A1)</strong> (Anti-Atherogenic Marker)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Apolipoprotein B (Apo B)</strong> (Pro-Atherogenic Particle Number)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Apo B / Apo A1 Ratio</strong> (Coronary Risk Assessment)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-biohazard"></i> Plaque &amp; Inflammation Biomarkers (2 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Lipoprotein (a) [Lp(a)] Quantitative</strong> (Genetic Risk Factor)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>High-Sensitivity hs-CRP</strong> (Cardiovascular Inflammation)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-heart"></i> Standard Lipid Profile (8 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Total Cholesterol, Direct HDL, Direct LDL, VLDL</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Serum Triglycerides &amp; Non-HDL Cholesterol</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Chol:HDL Ratio &amp; LDL:HDL Ratio</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="back-action-bar">
+                <button type="button" class="btn-hospital-orange text-xs flex-1 justify-center py-2.5 font-bold shadow-md" onclick="openBookingModal('Basic Cardiac Screen', 2500)">
+                  <i class="fas fa-calendar-check mr-1.5"></i> Book Package
+                </button>
+                <button type="button" class="btn-flip-back" title="Flip back to package details">
+                  <i class="fas fa-undo text-orange-400"></i> Flip Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Extended Lipid Profile -->
+        <div class="flip-card-3d-wrap" data-category="cardiac">
+          <div class="flip-card-3d-inner">
+            <div class="flip-card-3d-front">
+              <div>
+                <div class="card-top-row">
+                  <span class="badge-clinical badge-cardiac">Cardiac Health</span>
+                  <span class="flip-flop-indicator"><i class="fas fa-sync-alt"></i> Flip for All Tests</span>
+                </div>
+                <h3 class="card-package-title">Extended Lipid Profile</h3>
+                <p class="card-package-description">
+                  Detect hidden cholesterol risks and atherogenic particle burdens beyond standard routine measurements.
+                </p>
+                <div class="card-specs-strip">
+                  <div class="spec-strip-box">
+                    <span class="lbl">Report Delivery</span>
+                    <span class="val">Same Day</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Fasting Diet</span>
+                    <span class="val">12h Fasting</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Scope</span>
+                    <span class="val">Subfractions</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Profile Tariff</div>
+                  <div class="price-text-large">₹2,000</div>
+                </div>
+                <button type="button" class="btn-trigger-flip">
+                  View Full Tests <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flip-card-3d-back">
+              <div class="back-face-header">
+                <div>
+                  <h4>Extended Lipid Markers</h4>
+                  <span>Lipid Subfractions &bull; Same Day Report</span>
+                </div>
+              </div>
+              <div class="back-test-scroll-area">
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-heart"></i> Complete Lipid Fractions (8 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Total Cholesterol &amp; Serum Triglycerides</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Direct HDL (Protective High-Density Lipoprotein)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Direct LDL (Atherogenic Low-Density Lipoprotein)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>VLDL, Non-HDL Cholesterol &amp; Clinical Ratios</strong></li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-dna"></i> Advanced Particle Analytics</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Lipoprotein (a) [Lp(a)] Quantitative</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Apolipoprotein A1 (Apo A1)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Apolipoprotein B (Apo B)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Apo B : Apo A1 Ratio</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="back-action-bar">
+                <button type="button" class="btn-hospital-orange text-xs flex-1 justify-center py-2.5 font-bold shadow-md" onclick="openBookingModal('Extended Lipid Profile', 2000)">
+                  <i class="fas fa-calendar-check mr-1.5"></i> Book Package
+                </button>
+                <button type="button" class="btn-flip-back" title="Flip back to package details">
+                  <i class="fas fa-undo text-orange-400"></i> Flip Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Pre Anesthetic Check Up (PAC) -->
+        <div class="flip-card-3d-wrap" data-category="specialized">
+          <div class="flip-card-3d-inner">
+            <div class="flip-card-3d-front">
+              <div>
+                <div class="card-top-row">
+                  <span class="badge-clinical badge-surgery">Pre-Surgical</span>
+                  <span class="flip-flop-indicator"><i class="fas fa-sync-alt"></i> Flip for All Tests</span>
+                </div>
+                <h3 class="card-package-title">Pre Anesthetic Check Up (PAC)</h3>
+                <p class="card-package-description">
+                  Mandatory surgical investigations ensuring anesthesia tolerance, surgeon clearance, and multi-organ physiological safety.
+                </p>
+                <div class="card-specs-strip">
+                  <div class="spec-strip-box">
+                    <span class="lbl">Report Delivery</span>
+                    <span class="val">Same Day</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Fasting Diet</span>
+                    <span class="val">Fasting/Random</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Panel Count</span>
+                    <span class="val">11 Key Panels</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Pre-Op Tariff</div>
+                  <div class="price-text-large">₹4,200</div>
+                </div>
+                <button type="button" class="btn-trigger-flip">
+                  View Full Tests <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flip-card-3d-back">
+              <div class="back-face-header">
+                <div>
+                  <h4>PAC Surgical Clearance Scope</h4>
+                  <span>11 Panels &bull; Mandatory Surgeon Protocol</span>
+                </div>
+              </div>
+              <div class="back-test-scroll-area">
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-shield-virus"></i> Infectious Disease Serology (4th Gen)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>HIV 1 &amp; 2 4th Gen Antigen &amp; Antibody Screen</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>HBsAg</strong> (Hepatitis B Surface Antigen Rapid / ECLIA)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Anti-HCV</strong> (Hepatitis C Total Antibodies)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-tint"></i> Coagulation &amp; Hemostasis Profile</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Prothrombin Time (PT) &amp; INR with Control</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Bleeding Time (BT) &amp; Clotting Time (CT)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>ABO &amp; Rh Factor Blood Grouping</strong></li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-flask"></i> Vital Organ Function Tests (18 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Liver Function (LFT):</strong> Bilirubin T/D, SGPT, SGOT, ALP, Total Protein, Albumin, Globulin</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Kidney Function (KFT):</strong> Blood Urea, Serum Creatinine, Electrolytes (Na+, K+, Cl-)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-file-medical"></i> Surgical Blood &amp; Urine Parameters</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Complete Blood Count (CBC 25 Parameters with Platelets)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Fasting/Random Blood Glucose &amp; HbA1c</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>TSH (Thyroid) &amp; Urine Routine Examination</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="back-action-bar">
+                <button type="button" class="btn-hospital-orange text-xs flex-1 justify-center py-2.5 font-bold shadow-md" onclick="openBookingModal('Pre Anesthetic Check Up', 4200)">
+                  <i class="fas fa-calendar-check mr-1.5"></i> Book Package
+                </button>
+                <button type="button" class="btn-flip-back" title="Flip back to package details">
+                  <i class="fas fa-undo text-orange-400"></i> Flip Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Annual Diabetes Check -->
+        <div class="flip-card-3d-wrap" data-category="diabetes">
+          <div class="flip-card-3d-inner">
+            <div class="flip-card-3d-front">
+              <div>
+                <div class="card-top-row">
+                  <span class="badge-clinical badge-diabetes">Diabetes Care</span>
+                  <span class="flip-flop-indicator"><i class="fas fa-sync-alt"></i> Flip for All Tests</span>
+                </div>
+                <h3 class="card-package-title">Annual Diabetes Check</h3>
+                <p class="card-package-description">
+                  Comprehensive annual screening for insulin resistance, carbohydrate disorders, and diabetic complications affecting heart, liver, and kidneys.
+                </p>
+                <div class="card-specs-strip">
+                  <div class="spec-strip-box">
+                    <span class="lbl">Report Delivery</span>
+                    <span class="val">Same Day</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Fasting Diet</span>
+                    <span class="val">10-12h Fasting</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Test Scope</span>
+                    <span class="val">50+ Parameters</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Annual Tariff</div>
+                  <div class="price-text-large">₹2,500</div>
+                </div>
+                <button type="button" class="btn-trigger-flip">
+                  View Full Tests <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flip-card-3d-back">
+              <div class="back-face-header">
+                <div>
+                  <h4>Annual Diabetes Investigation</h4>
+                  <span>End-Organ Protection &bull; Same Day Report</span>
+                </div>
+              </div>
+              <div class="back-test-scroll-area">
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-cube"></i> Glycemic Status (3 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Fasting Blood Glucose (FBG)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Glycated Hemoglobin (HbA1c by HPLC)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Estimated Average Glucose (eAG)</strong></li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-filter"></i> Diabetic Nephropathy Screen (Urine ACR)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Urine Microalbumin Quantitative</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Urine Creatinine Spot Test</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Urine Albumin:Creatinine Ratio (ACR)</strong> <span class="param-tag">Early Kidney Alert</span></li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-flask"></i> Renal &amp; Liver Safety (14 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Kidney Function (KFT):</strong> Blood Urea, BUN, Serum Creatinine, Uric Acid, Sodium, Potassium, Chloride, Total Protein</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Liver Enzymes:</strong> SGPT (ALT), SGOT (AST), Alkaline Phosphatase (ALP)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-heartbeat"></i> Lipid &amp; Cardiovascular Profile (8 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Total Cholesterol &amp; Serum Triglycerides</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Direct HDL, Direct LDL, VLDL, Non-HDL &amp; Atherogenic Ratios</strong></li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-tint"></i> Hematology Base</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Complete Blood Count (CBC - 25 Parameters with Platelets)</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="back-action-bar">
+                <button type="button" class="btn-hospital-orange text-xs flex-1 justify-center py-2.5 font-bold shadow-md" onclick="openBookingModal('Annual Diabetes Check', 2500)">
+                  <i class="fas fa-calendar-check mr-1.5"></i> Book Package
+                </button>
+                <button type="button" class="btn-flip-back" title="Flip back to package details">
+                  <i class="fas fa-undo text-orange-400"></i> Flip Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Quarterly Diabetes Check -->
+        <div class="flip-card-3d-wrap" data-category="diabetes">
+          <div class="flip-card-3d-inner">
+            <div class="flip-card-3d-front">
+              <div>
+                <div class="card-top-row">
+                  <span class="badge-clinical badge-diabetes">Diabetes Care</span>
+                  <span class="flip-flop-indicator"><i class="fas fa-sync-alt"></i> Flip for All Tests</span>
+                </div>
+                <h3 class="card-package-title">Quarterly Diabetes Check</h3>
+                <p class="card-package-description">
+                  Standard quarterly panel to monitor glycemic control, average glucose levels, and kidney filtration safety every 90 days.
+                </p>
+                <div class="card-specs-strip">
+                  <div class="spec-strip-box">
+                    <span class="lbl">Report Delivery</span>
+                    <span class="val">Same Day</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Diet</span>
+                    <span class="val">Random</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Interval</span>
+                    <span class="val">Every 3 Months</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Tariff</div>
+                  <div class="price-text-large">₹1,200</div>
+                </div>
+                <button type="button" class="btn-trigger-flip">
+                  View Full Tests <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flip-card-3d-back">
+              <div class="back-face-header">
+                <div>
+                  <h4>Quarterly Diabetes Scope</h4>
+                  <span>Glycemic &amp; Renal Tracking &bull; Same Day</span>
+                </div>
+              </div>
+              <div class="back-test-scroll-area">
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-cube"></i> Glycemic &amp; Hematological Parameters</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Hemoglobin Concentration (Hb)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Glucose (Random Blood Sugar)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Glycated Hemoglobin (HbA1c - 3-Month Glycemic Average)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Estimated Average Glucose (eAG)</strong></li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-filter"></i> Early Nephropathy Screening (Urine ACR)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Serum Creatinine</strong> (Renal Glomerular Filtration Marker)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Urine Microalbumin Quantitative</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Urine Albumin:Creatinine Ratio (ACR)</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="back-action-bar">
+                <button type="button" class="btn-hospital-orange text-xs flex-1 justify-center py-2.5 font-bold shadow-md" onclick="openBookingModal('Quarterly Diabetes Check', 1200)">
+                  <i class="fas fa-calendar-check mr-1.5"></i> Book Package
+                </button>
+                <button type="button" class="btn-flip-back" title="Flip back to package details">
+                  <i class="fas fa-undo text-orange-400"></i> Flip Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. PCOD / PCOS Panel -->
+        <div class="flip-card-3d-wrap" data-category="women">
+          <div class="flip-card-3d-inner">
+            <div class="flip-card-3d-front">
+              <div>
+                <div class="card-top-row">
+                  <span class="badge-clinical badge-women">Women's Health</span>
+                  <span class="flip-flop-indicator"><i class="fas fa-sync-alt"></i> Flip for All Tests</span>
+                </div>
+                <h3 class="card-package-title">PCOD / PCOS Panel</h3>
+                <p class="card-package-description">
+                  Specialized endocrine and metabolic panel for accurate diagnosis, monitoring, and hormonal balancing of Polycystic Ovarian Syndrome.
+                </p>
+                <div class="card-specs-strip">
+                  <div class="spec-strip-box">
+                    <span class="lbl">Report Delivery</span>
+                    <span class="val">Same Day</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Fasting Diet</span>
+                    <span class="val">Fasting</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Hormone Scope</span>
+                    <span class="val">8 Key Hormones</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Specialist Tariff</div>
+                  <div class="price-text-large">₹3,500</div>
+                </div>
+                <button type="button" class="btn-trigger-flip">
+                  View Full Tests <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flip-card-3d-back">
+              <div class="back-face-header">
+                <div>
+                  <h4>PCOD Hormonal Markers</h4>
+                  <span>Endocrine &amp; Metabolic Health &bull; Same Day</span>
+                </div>
+              </div>
+              <div class="back-test-scroll-area">
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-venus"></i> Reproductive Hormonal Axis</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Follicle Stimulating Hormone (FSH)</strong> (Follicular Growth)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Luteinizing Hormone (LH)</strong> (Ovulatory Signal)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>LH : FSH Ratio</strong> <span class="param-tag">Key Diagnostic Marker</span></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Serum Prolactin</strong> (Hyperprolactinemia Screening)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-fire"></i> Androgens &amp; Adrenal Activity</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Total Testosterone</strong> (Hyperandrogenism &amp; Hirsutism)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>DHEA-S</strong> (Dehydroepiandrosterone Sulfate - Adrenal Androgen)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-dna"></i> Metabolic &amp; Insulin Resistance</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Fasting Blood Glucose (FBG)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Fasting Serum Insulin</strong> (HOMA-IR Insulin Resistance Index)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>TSH 3rd Gen Ultrasensitive</strong> (Thyroid Dysregulation)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="back-action-bar">
+                <button type="button" class="btn-hospital-orange text-xs flex-1 justify-center py-2.5 font-bold shadow-md" onclick="openBookingModal('PCOD Panel', 3500)">
+                  <i class="fas fa-calendar-check mr-1.5"></i> Book Package
+                </button>
+                <button type="button" class="btn-flip-back" title="Flip back to package details">
+                  <i class="fas fa-undo text-orange-400"></i> Flip Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Complete Anemia Profile -->
+        <div class="flip-card-3d-wrap" data-category="specialized">
+          <div class="flip-card-3d-inner">
+            <div class="flip-card-3d-front">
+              <div>
+                <div class="card-top-row">
+                  <span class="badge-clinical badge-wellness">Hematology</span>
+                  <span class="flip-flop-indicator"><i class="fas fa-sync-alt"></i> Flip for All Tests</span>
+                </div>
+                <h3 class="card-package-title">Complete Anemia Profile</h3>
+                <p class="card-package-description">
+                  Exhaustive differential investigation for nutritional, hemolytic, iron deficiency, and thalassemia anemias with peripheral smear and HPLC.
+                </p>
+                <div class="card-specs-strip">
+                  <div class="spec-strip-box">
+                    <span class="lbl">Report Delivery</span>
+                    <span class="val">Same Day / 48h</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Diet</span>
+                    <span class="val">Random</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Methodology</span>
+                    <span class="val">HPLC + Microscopy</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Tariff</div>
+                  <div class="price-text-large">₹3,200</div>
+                </div>
+                <button type="button" class="btn-trigger-flip">
+                  View Full Tests <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flip-card-3d-back">
+              <div class="back-face-header">
+                <div>
+                  <h4>Anemia Differential Scope</h4>
+                  <span>Erythrocyte &amp; Iron Analytics &bull; Bio-Rad D-10</span>
+                </div>
+              </div>
+              <div class="back-test-scroll-area">
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-tint"></i> Complete Hemogram &amp; Smear</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Complete Blood Count (CBC - 25 Parameters)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Peripheral Blood Smear</strong> (Microscopy by Senior Pathologist)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Reticulocyte Count &amp; Reticulocyte Production Index (RPI)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Erythrocyte Sedimentation Rate (ESR Automated)</strong></li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-magnet"></i> Complete Iron Kinetics Profile (5 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Serum Total Iron &amp; Unsaturated Iron Binding Capacity (UIBC)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Total Iron Binding Capacity (TIBC)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Transferrin Saturation Percentage (%)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Serum Ferritin Quantitative</strong> (True Cellular Iron Storage)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-dna"></i> Hemoglobinopathy &amp; Vitamins</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Vitamin B12 &amp; Serum Folate (Folic Acid)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Beta Thalassemia HPLC Electrophoresis</strong> (Bio-Rad D-10)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="back-action-bar">
+                <button type="button" class="btn-hospital-orange text-xs flex-1 justify-center py-2.5 font-bold shadow-md" onclick="openBookingModal('Complete Anemia Profile', 3200)">
+                  <i class="fas fa-calendar-check mr-1.5"></i> Book Package
+                </button>
+                <button type="button" class="btn-flip-back" title="Flip back to package details">
+                  <i class="fas fa-undo text-orange-400"></i> Flip Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Comprehensive Nutrition Profile -->
+        <div class="flip-card-3d-wrap" data-category="wellness">
+          <div class="flip-card-3d-inner">
+            <div class="flip-card-3d-front">
+              <div>
+                <div class="card-top-row">
+                  <span class="badge-clinical badge-wellness">Nutrition Check</span>
+                  <span class="flip-flop-indicator"><i class="fas fa-sync-alt"></i> Flip for All Tests</span>
+                </div>
+                <h3 class="card-package-title">Comprehensive Nutrition Profile</h3>
+                <p class="card-package-description">
+                  Checks for vital micronutrient, mineral, and vitamin deficiencies affecting stamina, muscle function, and cellular immunity.
+                </p>
+                <div class="card-specs-strip">
+                  <div class="spec-strip-box">
+                    <span class="lbl">Report Delivery</span>
+                    <span class="val">Same Day</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Diet</span>
+                    <span class="val">Random</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Focus</span>
+                    <span class="val">Vit &amp; Minerals</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Tariff</div>
+                  <div class="price-text-large">₹3,200</div>
+                </div>
+                <button type="button" class="btn-trigger-flip">
+                  View Full Tests <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flip-card-3d-back">
+              <div class="back-face-header">
+                <div>
+                  <h4>Nutrition Parameters</h4>
+                  <span>Vitamins, Minerals &amp; Proteins &bull; Same Day</span>
+                </div>
+              </div>
+              <div class="back-test-scroll-area">
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-capsules"></i> Critical Vitamin Status (3 Tests)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>25-OH Vitamin D Total</strong> (Bone Density &amp; Immune Health)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Vitamin B12 Cyanocobalamin</strong> (Nerve &amp; RBC Formation)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Serum Folate (Folic Acid) Quantitative</strong></li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-vial"></i> Essential Minerals &amp; Iron Kinetics</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Serum Calcium (Total Ionized) &amp; Serum Zinc</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Total Serum Iron &amp; TIBC</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Serum Ferritin &amp; Transferrin Saturation %</strong></li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-flask"></i> Protein &amp; Hematological Base</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Total Protein, Albumin, Globulin &amp; A:G Ratio</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Complete Blood Count (CBC - 25 Parameters)</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="back-action-bar">
+                <button type="button" class="btn-hospital-orange text-xs flex-1 justify-center py-2.5 font-bold shadow-md" onclick="openBookingModal('Comprehensive Nutrition Profile', 3200)">
+                  <i class="fas fa-calendar-check mr-1.5"></i> Book Package
+                </button>
+                <button type="button" class="btn-flip-back" title="Flip back to package details">
+                  <i class="fas fa-undo text-orange-400"></i> Flip Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. Thalassemia Profile -->
+        <div class="flip-card-3d-wrap" data-category="specialized">
+          <div class="flip-card-3d-inner">
+            <div class="flip-card-3d-front">
+              <div>
+                <div class="card-top-row">
+                  <span class="badge-clinical badge-wellness">Hematology</span>
+                  <span class="flip-flop-indicator"><i class="fas fa-sync-alt"></i> Flip for All Tests</span>
+                </div>
+                <h3 class="card-package-title">Thalassemia Profile</h3>
+                <p class="card-package-description">
+                  Automated HPLC chromatography for diagnosis and differentiation of iron deficiency from hereditary beta thalassemias.
+                </p>
+                <div class="card-specs-strip">
+                  <div class="spec-strip-box">
+                    <span class="lbl">Report Delivery</span>
+                    <span class="val">48 Hours</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Diet</span>
+                    <span class="val">Random</span>
+                  </div>
+                  <div class="spec-strip-box">
+                    <span class="lbl">Gold Standard</span>
+                    <span class="val">Bio-Rad D-10</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Specialist Tariff</div>
+                  <div class="price-text-large">₹1,500</div>
+                </div>
+                <button type="button" class="btn-trigger-flip">
+                  View Full Tests <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flip-card-3d-back">
+              <div class="back-face-header">
+                <div>
+                  <h4>Thalassemia HPLC Investigation</h4>
+                  <span>Hb Variant Analysis &bull; Bio-Rad D-10</span>
+                </div>
+              </div>
+              <div class="back-test-scroll-area">
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-dna"></i> Automated HPLC Chromatography (Bio-Rad D-10)</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Beta Thalassemia HPLC Analysis</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Hemoglobin A2 (HbA2) Quantitative</strong> <span class="param-tag">Beta Thalassemia Trait</span></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Hemoglobin F (HbF - Fetal Hemoglobin)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Adult Hemoglobin A0 (HbA0)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Variant Hemoglobins Screen</strong> (HbS Sickle, HbD Punjab, HbE)</li>
+                  </ul>
+                </div>
+                <div class="back-test-group">
+                  <div class="back-test-group-title"><i class="fas fa-tint"></i> Differential Iron &amp; Blood Indices</div>
+                  <ul class="back-test-items-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Complete Blood Count (CBC with Mentzer Index &amp; RDW)</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Peripheral Blood Smear</strong> (Microcytic Hypochromic Rule-Out)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Serum Total Iron, TIBC &amp; Transferrin Saturation %</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="back-action-bar">
+                <button type="button" class="btn-hospital-orange text-xs flex-1 justify-center py-2.5 font-bold shadow-md" onclick="openBookingModal('Thalassemia Profile', 1500)">
+                  <i class="fas fa-calendar-check mr-1.5"></i> Book Package
+                </button>
+                <button type="button" class="btn-flip-back" title="Flip back to package details">
+                  <i class="fas fa-undo text-orange-400"></i> Flip Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="hospital-footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-8">
+        <div>
+          <h4 class="text-lg font-bold text-white mb-3">SEN DIAGNOSTICS</h4>
+          <p class="text-xs text-gray-400">NABL Accredited Laboratory (MC-6584) & registered with ISHTM-AIIMS EQAP New Delhi.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-3">Quick Links</h4>
+          <div class="flex flex-col gap-1.5 text-xs text-gray-400">
+            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="about.html" class="hover:text-white">About Our Legacy</a>
+            <a href="test-list.html" class="hover:text-white">Diagnostic Test Directory</a>
+            <a href="contact-us.html" class="hover:text-white">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-3">Patna Central Facility</h4>
+          <p class="text-xs text-gray-400">Budh Marg, Patna Bihar 800 001</p>
+          <p class="text-xs text-gray-400 mt-1">+91 74819 53528 | ask@senlabs.in</p>
+        </div>
+      </div>
+      <div class="pt-6 border-t border-gray-800 text-xs text-gray-500 text-center">
+        Copyright &copy; 2026 Sen Diagnostics Private Limited | All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: INTERACTIVE BOOKING ENGINE (HOME SAMPLE COLLECTION)
+       ========================================================================== -->
+  <div class="hospital-modal-backdrop" id="booking-modal">
+    <div class="hospital-modal-card">
+      <div class="hospital-modal-head">
+        <h3 class="text-xl font-bold text-gray-900">Book Diagnostic Investigation</h3>
+        <button class="modal-close-round" id="close-booking-modal" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="p-6 sm:p-8">
+        <form id="booking-form" class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Selected Test / Package</label>
+            <input type="text" id="book-test-name" class="w-full px-4 py-2.5 border border-gray-300 rounded-xl bg-gray-50 text-gray-900 font-semibold" readonly>
+            <div class="flex justify-between items-center mt-1 text-xs">
+              <span class="text-gray-500">Standard Tariff:</span>
+              <span id="book-price-display" class="font-bold text-sky-700 text-base">₹4,800</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Patient Name *</label>
+              <input type="text" id="book-patient-name" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-sky-600 outline-none" placeholder="Full Name" required>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Mobile (WhatsApp) *</label>
+              <input type="tel" id="book-patient-phone" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-sky-600 outline-none" placeholder="10-digit number" required>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Preferred Date</label>
+              <input type="date" id="book-date" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-sky-600 outline-none" required>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Time Slot</label>
+              <select id="book-slot" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-sky-600 outline-none">
+                <option value="07:00 AM - 09:00 AM (Fasting)">Morning 07:00 AM - 09:00 AM (Fasting)</option>
+                <option value="09:00 AM - 11:30 AM">Morning 09:00 AM - 11:30 AM</option>
+                <option value="12:00 PM - 03:00 PM">Afternoon 12:00 PM - 03:00 PM</option>
+                <option value="04:00 PM - 07:00 PM">Evening 04:00 PM - 07:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1.5">Collection Type</label>
+            <div class="flex gap-4 text-sm">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="collection-type" value="home" checked class="text-sky-600"> Home Sample Collection
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="collection-type" value="lab" class="text-sky-600"> Budh Marg Central Lab Visit
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Address in Patna</label>
+            <textarea id="book-address" rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-sky-600 outline-none text-sm" placeholder="Street, landmark, colony, Patna"></textarea>
+          </div>
+
+          <button type="submit" class="btn-hospital-orange w-full justify-center py-3 text-base">
+            <i class="fa-brands fa-whatsapp mr-1.5 text-lg"></i> Confirm & Dispatch to WhatsApp Desk
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: 2026 OFFICIAL HOLIDAYS CALENDAR
+       ========================================================================== -->
+  <div class="hospital-modal-backdrop" id="holiday-modal">
+    <div class="hospital-modal-card max-w-2xl">
+      <div class="hospital-modal-head">
+        <h3 class="text-xl font-bold text-gray-900">List of Holidays 2026</h3>
+        <button class="modal-close-round" id="close-holiday-modal" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="p-6">
+        <p class="text-xs text-gray-500 mb-4">Official declared laboratory holiday schedule for Central Facility & Collection points across Patna:</p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-gray-100 text-gray-700 uppercase font-bold border-b border-gray-200">
+                <th class="py-2.5 px-3">#</th>
+                <th class="py-2.5 px-3">Date</th>
+                <th class="py-2.5 px-3">Day</th>
+                <th class="py-2.5 px-3">Holiday / Occasion</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr><td class="py-2.5 px-3 font-bold">1</td><td class="py-2.5 px-3">1st January 2026</td><td class="py-2.5 px-3">Thursday</td><td class="py-2.5 px-3">New Year</td></tr>
+              <tr><td class="py-2.5 px-3 font-bold">2</td><td class="py-2.5 px-3">23rd January 2026</td><td class="py-2.5 px-3">Friday</td><td class="py-2.5 px-3">Basant Panchami</td></tr>
+              <tr><td class="py-2.5 px-3 font-bold">3</td><td class="py-2.5 px-3">26th January 2026</td><td class="py-2.5 px-3">Monday</td><td class="py-2.5 px-3">Republic Day</td></tr>
+              <tr class="bg-amber-50/50"><td class="py-2.5 px-3 font-bold">4</td><td class="py-2.5 px-3">3rd – 5th March 2026</td><td class="py-2.5 px-3">Tue – Thu</td><td class="py-2.5 px-3">Holi & Analyzer Maintenance</td></tr>
+              <tr><td class="py-2.5 px-3 font-bold">5</td><td class="py-2.5 px-3">15th August 2026</td><td class="py-2.5 px-3">Saturday</td><td class="py-2.5 px-3">Independence Day</td></tr>
+              <tr class="bg-amber-50/50"><td class="py-2.5 px-3 font-bold">6</td><td class="py-2.5 px-3">17th – 21st October 2026</td><td class="py-2.5 px-3">Sat – Wed</td><td class="py-2.5 px-3">Durga Puja & Dussehra</td></tr>
+              <tr><td class="py-2.5 px-3 font-bold">7</td><td class="py-2.5 px-3">8th November 2026</td><td class="py-2.5 px-3">Sunday</td><td class="py-2.5 px-3">Diwali</td></tr>
+              <tr class="bg-amber-50/50"><td class="py-2.5 px-3 font-bold">8</td><td class="py-2.5 px-3">15th – 16th November 2026</td><td class="py-2.5 px-3">Sun – Mon</td><td class="py-2.5 px-3">Chhath Puja Mahaparv</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="https://wa.me/917481955502" target="_blank" class="floating-whatsapp-widget" title="WhatsApp +91 74819 55502"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM STICKY QUICK-ACTION BAR (CLINICAL RAPID ACTIONS)
+       ========================================================================== -->
+  <aside class="mobile-sticky-action-bar" aria-label="Mobile Quick Actions">
+    <div class="mobile-action-bar-inner">
+      <!-- 1. Direct Call -->
+      <a href="tel:+917481953528" class="mobile-action-tab" title="Call Sen Diagnostics">
+        <div class="mobile-tab-icon-wrap text-sky-600">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <span class="mobile-tab-label">Call Lab</span>
+      </a>
+
+      <!-- 2. WhatsApp Chat -->
+      <a href="https://wa.me/917481955502?text=Hello%20Sen%20Diagnostics%2C%20I%20would%20like%20to%20book%20a%20test%20or%20inquire%20about%20reports." target="_blank" rel="noopener noreferrer" class="mobile-action-tab" title="WhatsApp Chat">
+        <div class="mobile-tab-icon-wrap text-emerald-600">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <span class="mobile-tab-label">WhatsApp</span>
+      </a>
+
+      <!-- 3. Primary CTA: Book Home Visit -->
+      <button type="button" class="mobile-action-btn-primary" onclick="openBookingModal('Sen 360 Health Profile (with Urine)', 4800)" title="Book Home Sample Collection">
+        <div class="pulse-ring"></div>
+        <i class="fas fa-calendar-check text-sm"></i>
+        <span>Book Visit</span>
+      </button>
+
+      <!-- 4. 15+ Centers Locator -->
+      <a href="center-facility.html" class="mobile-action-tab" title="Find Patna Centers">
+        <div class="mobile-tab-icon-wrap text-orange-600">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <span class="mobile-tab-label">15+ Centers</span>
+      </a>
+    </div>
+  </aside>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

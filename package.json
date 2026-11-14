@@ -1,0 +1,13 @@
+{
+  "name": "aman",
+  "version": "1.0.0",
+  "description": "Sen Diagnostics - Premier Pathology Laboratory & Diagnostic Center (Established 1965)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "deploy": "node deploy-to-github.js"
+  },
+  "author": "Aman",
+  "license": "ISC"
+}
+
