@@ -629,29 +629,31 @@
 
   <!-- MOBILE BOTTOM STICKY QUICK-ACTION BAR -->
   <aside class="mobile-sticky-action-bar" aria-label="Mobile Quick Actions">
-    <a href="tel:+917481955502" class="mobile-action-tab" aria-label="Call Hospital">
-      <div class="mobile-tab-icon-wrap">
-        <i class="fas fa-phone-alt text-sky-600"></i>
-      </div>
-      <span class="mobile-tab-label">Call</span>
-    </a>
-    <button type="button" onclick="openBookingModal('Home Collection Request', 0)" class="mobile-action-btn-primary" aria-label="Book Home Visit">
-      <span class="pulse-ring"></span>
-      <i class="fas fa-home"></i>
-      <span>Book Visit</span>
-    </button>
-    <a href="packages.html" class="mobile-action-tab" aria-label="View Health Packages">
-      <div class="mobile-tab-icon-wrap">
-        <i class="fas fa-box-medical text-orange-500"></i>
-      </div>
-      <span class="mobile-tab-label">Packages</span>
-    </a>
-    <a href="https://wa.me/917481955502?text=Hello%20Sen%20Diagnostics%2C%20I%20would%20like%20to%20book%20a%20test." target="_blank" class="mobile-action-tab" aria-label="WhatsApp Us">
-      <div class="mobile-tab-icon-wrap">
-        <i class="fab fa-whatsapp text-emerald-500"></i>
-      </div>
-      <span class="mobile-tab-label">WhatsApp</span>
-    </a>
+    <div class="mobile-action-bar-inner">
+      <a href="tel:+917481955502" class="mobile-action-tab" aria-label="Call Hospital">
+        <div class="mobile-tab-icon-wrap">
+          <i class="fas fa-phone-alt text-sky-600"></i>
+        </div>
+        <span class="mobile-tab-label">Call Lab</span>
+      </a>
+      <a href="https://wa.me/917481955502?text=Hello%20Sen%20Diagnostics%2C%20I%20would%20like%20to%20book%20a%20test." target="_blank" class="mobile-action-tab" aria-label="WhatsApp Us">
+        <div class="mobile-tab-icon-wrap">
+          <i class="fab fa-whatsapp text-emerald-500"></i>
+        </div>
+        <span class="mobile-tab-label">WhatsApp</span>
+      </a>
+      <button type="button" onclick="openBookingModal('Home Collection Request', 0)" class="mobile-action-btn-primary" aria-label="Book Home Visit">
+        <span class="pulse-ring"></span>
+        <i class="fas fa-calendar-check text-sm"></i>
+        <span>Book Visit</span>
+      </button>
+      <a href="packages.html" class="mobile-action-tab" aria-label="View Health Packages">
+        <div class="mobile-tab-icon-wrap">
+          <i class="fas fa-box-medical text-orange-500"></i>
+        </div>
+        <span class="mobile-tab-label">Packages</span>
+      </a>
+    </div>
   </aside>
 
   <!-- FLOATING WHATSAPP CTA -->
@@ -691,3 +693,4 @@
   </script>
 </body>
 </html>
+
