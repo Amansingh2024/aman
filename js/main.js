@@ -193,110 +193,88 @@ function init3DTilt() {
    ========================================================================== */
 function initFlipCards() {
   const flipCards = document.querySelectorAll('.flip-card-3d-wrap');
+  if (!flipCards.length) return;
 
   flipCards.forEach(card => {
-    // 1. Inject Visual Gesture Corner Fold on Front Face
+    const inner = card.querySelector('.flip-card-3d-inner');
     const frontFace = card.querySelector('.flip-card-3d-front');
+    const backFace = card.querySelector('.flip-card-3d-back');
+    if (!inner) return;
+
+    // Remove any conflicting inline transform styles so CSS handles GPU flipping cleanly
+    inner.style.transform = '';
+
+    // 1. Inject Visual Gesture Corner Fold on Front Face
     if (frontFace && !frontFace.querySelector('.flip-corner-fold')) {
       const fold = document.createElement('div');
       fold.className = 'flip-corner-fold';
-      fold.setAttribute('title', 'Click or swipe to flip card');
+      fold.setAttribute('title', 'Click to flip');
       fold.innerHTML = '<i class="fas fa-sync-alt"></i>';
       frontFace.appendChild(fold);
     }
 
-    // 2. Triggers that flip card forward to back
-    const flipTriggers = card.querySelectorAll('.btn-trigger-flip, .flip-flop-indicator, .flip-corner-fold');
-    flipTriggers.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        card.classList.toggle('flipped');
-      });
+    // 2. ONE-TOUCH / ONE-CLICK FLIP-FLOP FOR LAPTOP, DESKTOP & MOBILE
+    card.addEventListener('click', (e) => {
+      // Don't flip when clicking booking button
+      if (e.target.closest('button[onclick*="openBookingModal"], .btn-hospital-orange[onclick]')) {
+        return;
+      }
+      // Don't flip when clicking links
+      if (e.target.closest('a')) {
+        return;
+      }
+      // Don't flip when scrolling inside the back-side checklist
+      if (e.target.closest('.back-test-scroll-area')) {
+        return;
+      }
+
+      // Flip card on click/tap!
+      card.classList.toggle('flipped');
     });
 
-    // 3. Triggers that flip back to front
+    // 3. Explicit triggers for back button & chips
     const backTriggers = card.querySelectorAll('.btn-flip-back');
     backTriggers.forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
+        e.preventDefault();
         card.classList.remove('flipped');
       });
     });
 
-    // 4. Clicking anywhere on front face (except buttons/links) flips to back
-    if (frontFace) {
-      frontFace.addEventListener('click', (e) => {
-        if (e.target.closest('button') || e.target.closest('a')) return;
-        card.classList.add('flipped');
+    const frontTriggers = card.querySelectorAll('.btn-trigger-flip, .flip-flop-indicator, .flip-corner-fold');
+    frontTriggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        card.classList.toggle('flipped');
       });
-    }
+    });
 
-    // 5. Clicking on back face (except buttons/links/scrollable area) flips back
-    const backFace = card.querySelector('.flip-card-3d-back');
-    if (backFace) {
-      backFace.addEventListener('click', (e) => {
-        if (e.target.closest('button') || e.target.closest('a') || e.target.closest('.back-test-scroll-area')) return;
-        card.classList.remove('flipped');
-      });
-    }
-
-    // 6. Mobile & Desktop Touch / Swipe Gesture
+    // 4. Touch swipe gesture for mobile / touchscreen laptops
     let touchStartX = 0;
     let touchStartY = 0;
     card.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-      touchStartY = e.changedTouches[0].screenY;
+      touchStartX = e.changedTouches[0].clientX;
+      touchStartY = e.changedTouches[0].clientY;
     }, { passive: true });
 
     card.addEventListener('touchend', (e) => {
-      const diffX = e.changedTouches[0].screenX - touchStartX;
-      const diffY = e.changedTouches[0].screenY - touchStartY;
-      // If horizontal swipe is distinct and greater than 40px:
-      if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY) * 1.2) {
+      const diffX = e.changedTouches[0].clientX - touchStartX;
+      const diffY = e.changedTouches[0].clientY - touchStartY;
+      if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY) * 1.3) {
         if (diffX < 0) {
-          // Swiped left -> flip to tests
           card.classList.add('flipped');
         } else {
-          // Swiped right -> flip back to front
           card.classList.remove('flipped');
         }
       }
     }, { passive: true });
 
-    // 7. Mouse Pointer Dynamic 3D Tilt Gesture on Hover
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const tiltX = ((y - centerY) / centerY) * -5;
-      const tiltY = ((x - centerX) / centerX) * 5;
-
-      const inner = card.querySelector('.flip-card-3d-inner');
-      if (!inner) return;
-
-      if (card.classList.contains('flipped')) {
-        inner.style.transform = `rotateY(180deg) rotateX(${tiltX * 0.7}deg) rotateY(${tiltY * 0.7}deg)`;
-      } else {
-        inner.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-      }
-    });
-
-    card.addEventListener('mouseleave', () => {
-      const inner = card.querySelector('.flip-card-3d-inner');
-      if (!inner) return;
-      if (card.classList.contains('flipped')) {
-        inner.style.transform = 'rotateY(180deg)';
-      } else {
-        inner.style.transform = 'rotateY(0deg)';
-      }
-    });
-
-    // 8. Keyboard Accessibility (Enter or Space key to flip)
+    // 5. Keyboard Accessibility (Enter or Space key to flip)
     card.setAttribute('tabindex', '0');
-    card.setAttribute('role', 'region');
-    card.setAttribute('aria-label', '3D Interactive Health Package Card. Press Enter to flip.');
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-label', 'Health package card. Click or press Enter to flip.');
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         if (e.target.closest('button') || e.target.closest('a')) return;

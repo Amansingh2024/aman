@@ -394,23 +394,43 @@ a:hover {
   text-align: left;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-  transition: transform 0.75s cubic-bezier(0.34, 1.35, 0.64, 1);
-  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.34, 1.35, 0.64, 1);
+  transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+  -webkit-transition: -webkit-transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: transform;
 }
 
 .flip-card-3d-wrap.flipped .flip-card-3d-inner {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg) !important;
+  -webkit-transform: rotateY(180deg) !important;
+}
+
+.flip-card-3d-wrap.flipped .flip-card-3d-front {
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.flip-card-3d-wrap.flipped .flip-card-3d-back {
+  pointer-events: auto !important;
+  z-index: 10 !important;
+}
+
+.flip-card-3d-wrap:not(.flipped) .flip-card-3d-front {
+  pointer-events: auto !important;
+  z-index: 10 !important;
+}
+
+.flip-card-3d-wrap:not(.flipped) .flip-card-3d-back {
+  pointer-events: none !important;
+  z-index: 1 !important;
 }
 
 .flip-card-3d-front, .flip-card-3d-back {
   position: absolute;
   inset: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  transform-style: preserve-3d !important;
+  -webkit-transform-style: preserve-3d !important;
   border-radius: var(--radius-lg);
   padding: 1.15rem 1.25rem !important;
   display: flex;
