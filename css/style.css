@@ -1661,3 +1661,56 @@ body {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+
+/* ==========================================================================
+   OFFICIAL SEN DIAGNOSTICS LOGO INTEGRATION (Header, Footer & Mobile)
+   ========================================================================== */
+.hospital-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.75rem;
+}
+
+.hospital-brand-logo {
+  height: 50px;
+  width: auto;
+  max-width: 185px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(12, 35, 64, 0.16);
+  border: 1px solid rgba(12, 35, 64, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+
+.hospital-brand:hover .hospital-brand-logo {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 14px rgba(12, 35, 64, 0.25);
+}
+
+.footer-logo-img {
+  height: 54px;
+  width: auto;
+  max-width: 210px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .hospital-brand-logo {
+    height: 40px;
+    max-width: 145px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hospital-brand-logo {
+    height: 35px;
+    max-width: 125px;
+  }
+}

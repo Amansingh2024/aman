@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <link rel="icon" type="image/jpeg" href="images/sen-logo.jpg">
+  <link rel="apple-touch-icon" href="images/sen-logo.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <meta name="theme-color" content="#0C2340">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -72,12 +74,8 @@
   <!-- NAVBAR -->
   <header class="hospital-nav">
     <div class="nav-container-flex">
-      <a href="index.html" class="hospital-brand">
-        <div class="brand-icon-box"><i class="fas fa-heartbeat"></i></div>
-        <div class="brand-title-wrap">
-          <div class="brand-main-title">SEN <span>DIAGNOSTICS</span></div>
-          <div class="brand-sub-title">Since 1965 • Three Generations</div>
-        </div>
+      <a href="index.html" class="hospital-brand" aria-label="Sen Diagnostics - Established 1965">
+        <img src="images/sen-logo.jpg" alt="Sen Diagnostics - The Pioneer of Laboratory Medicine in Bihar - Since 1965" class="hospital-brand-logo">
       </a>
       <nav>
         <ul class="nav-links-menu">
@@ -89,240 +87,8 @@
           <li><a href="contact-us.html" class="nav-link-btn">Contact Us</a></li>
         </ul>
       </nav>
-      <div class="flex items-center gap-3">
-        <button class="btn-hospital-orange text-sm hidden sm:inline-flex" onclick="openBookingModal('General Investigation Inquiry', 0)">
-          <i class="fas fa-calendar-check mr-1"></i> Book Home Collection
-        </button>
-        <button id="mobile-nav-toggle" class="md:hidden p-2 text-gray-800"><i class="fas fa-bars text-xl"></i></button>
-      </div>
-    </div>
-    <div id="mobile-menu-drawer" class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-4 shadow-xl">
-      <div class="flex flex-col gap-3 font-semibold text-gray-700">
-        <a href="index.html" class="py-1">Home</a>
-        <a href="about.html" class="py-1">About Us</a>
-        <a href="packages.html" class="py-1">Health Packages</a>
-        <a href="test-list.html" class="text-sky-600 py-1 font-bold">Test Directory</a>
-        <a href="center-facility.html" class="py-1">Center Facility</a>
-        <a href="contact-us.html" class="py-1">Contact Us</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- 3. Inner Page Hero Banner -->
-  <section class="inner-page-hero text-center">
-    <div class="max-w-5xl mx-auto px-4">
-      <div class="breadcrumbs">
-        <a href="index.html"><i class="fas fa-home mr-1"></i> Home</a>
-        <i class="fas fa-chevron-right text-xs text-gray-500"></i>
-        <span class="text-white font-medium">Diagnostic Test Directory</span>
-      </div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
-        Diagnostic Test Directory & <span class="text-orange-500">Price Tariff</span>
-      </h1>
-      <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-        Search our authentic catalog of clinical pathology, biochemistry, hematology, and immunology investigations. Certified NABL accuracy, transparent pricing, and fast digital reporting.
-      </p>
-      <div class="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-gray-300">
-        <span class="bg-gray-800/80 px-3 py-1.5 rounded-full border border-gray-700 flex items-center gap-1.5">
-          <i class="fas fa-check-circle text-emerald-400"></i> Fixed Government & NABL Tariff
-        </span>
-        <span class="bg-gray-800/80 px-3 py-1.5 rounded-full border border-gray-700 flex items-center gap-1.5">
-          <i class="fas fa-bolt text-amber-400"></i> Same-Day Online WhatsApp Reports
-        </span>
-        <span class="bg-gray-800/80 px-3 py-1.5 rounded-full border border-gray-700 flex items-center gap-1.5">
-          <i class="fas fa-house-user text-sky-400"></i> Home Phlebotomy Across Patna
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Real-Time Test Search & Directory Filter -->
-  <main class="flex-grow">
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-      
-      <!-- Search Input Card Overlay -->
-      <div class="test-search-panel">
-        <div class="relative max-w-3xl mx-auto mb-6">
-          <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 text-lg"></i>
-          <input 
-            type="text" 
-            id="test-search-field" 
-            class="search-input-field pl-14 pr-12" 
-            placeholder="Search by test name (e.g., CBC, KFT, LFT, Lipid, HbA1c, Vitamin D, Ferritin)..."
-            autocomplete="off"
-          >
-          <button id="clear-search-btn" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-700 text-sm hidden" onclick="document.getElementById('test-search-field').value=''; document.getElementById('test-search-field').dispatchEvent(new Event('input'));">
-            <i class="fas fa-times-circle text-lg"></i>
-          </button>
-        </div>
-
-        <!-- Category Filter Pills -->
-        <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
-          <button class="category-pill-filter active" data-cat="all">
-            <i class="fas fa-th-large mr-1.5"></i> All Tests
-          </button>
-          <button class="category-pill-filter" data-cat="biochemistry">
-            <i class="fas fa-flask mr-1.5"></i> Biochemistry & Organ Profiles
-          </button>
-          <button class="category-pill-filter" data-cat="hematology">
-            <i class="fas fa-tint mr-1.5"></i> Hematology & Blood Counts
-          </button>
-          <button class="category-pill-filter" data-cat="cardiac">
-            <i class="fas fa-heartbeat mr-1.5"></i> Cardiac Markers
-          </button>
-          <button class="category-pill-filter" data-cat="diabetes">
-            <i class="fas fa-chart-line mr-1.5"></i> Diabetes & Glucose
-          </button>
-          <button class="category-pill-filter" data-cat="immunology">
-            <i class="fas fa-shield-virus mr-1.5"></i> Immunology & Allergy
-          </button>
-          <button class="category-pill-filter" data-cat="routine">
-            <i class="fas fa-vial mr-1.5"></i> Routine & Cultures
-          </button>
-        </div>
-
-        <!-- Count Indicator -->
-        <div class="flex items-center justify-between text-xs text-gray-500 mt-6 pt-4 border-t border-gray-100">
-          <span id="test-count-indicator" class="font-bold text-gray-800">30 Diagnostic Tests Available</span>
-          <span class="flex items-center gap-1 text-emerald-600 font-medium">
-            <i class="fas fa-shield-alt"></i> NABL Certified Reference Limits Included
-          </span>
-        </div>
-      </div>
-
-      <!-- Test Catalog Grid Container -->
-      <div id="tests-display-grid" class="test-grid-cards mt-8">
-        <!-- Rendered dynamically by js/main.js initTestDirectory() -->
-      </div>
-    </section>
-
-    <!-- 5. Pre-Test Patient Preparation & Guidelines -->
-    <section class="bg-white py-16 border-t border-b border-gray-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <span class="inline-block px-3 py-1 bg-orange-100 text-orange-800 border border-orange-200 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
-            Clinical Instructions
-          </span>
-          <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">
-            Pre-Test <span class="text-orange-600">Preparation Guidelines</span>
-          </h2>
-          <p class="text-gray-600 text-sm mt-2">
-            Ensuring precise analytical results starts with proper specimen preparation. Follow these medical recommendations prior to blood or urine sample collection.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Guide 1: Fasting Requirements -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-            <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-xl mb-4">
-              <i class="fas fa-utensils"></i>
-            </div>
-            <h3 class="text-base font-bold text-gray-900 mb-2">Fasting Protocols</h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-3">
-              Tests such as <strong>Fasting Blood Glucose (FBS)</strong>, <strong>Lipid Profile</strong>, and <strong>HOMA-IR</strong> require an overnight 10 to 12-hour fast.
-            </p>
-            <ul class="text-[11px] text-gray-500 space-y-1 list-disc pl-4">
-              <li>Only plain water is permitted during fasting.</li>
-              <li>Avoid tea, coffee, milk, and chewables.</li>
-              <li>Do not exceed 14 hours of prolonged starvation.</li>
-            </ul>
-          </div>
-
-          <!-- Guide 2: Medication Timings -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-            <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl mb-4">
-              <i class="fas fa-pills"></i>
-            </div>
-            <h3 class="text-base font-bold text-gray-900 mb-2">Medication Timings</h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-3">
-              Consult your physician before pausing regular prescription drugs prior to diagnostics.
-            </p>
-            <ul class="text-[11px] text-gray-500 space-y-1 list-disc pl-4">
-              <li><strong>Thyroid Tests:</strong> Take Thyroxine tablets <em>after</em> giving your morning blood sample.</li>
-              <li><strong>Diabetes Meds:</strong> Take with post-meal breakfast.</li>
-              <li>Inform the phlebotomist about blood thinners (Aspirin, Warfarin).</li>
-            </ul>
-          </div>
-
-          <!-- Guide 3: Urine & Culture Collection -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-4">
-              <i class="fas fa-vial-circle-check"></i>
-            </div>
-            <h3 class="text-base font-bold text-gray-900 mb-2">Urine & Culture Samples</h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-3">
-              Accurate microbiological and urinalysis parameters require a clean-catch midstream technique.
-            </p>
-            <ul class="text-[11px] text-gray-500 space-y-1 list-disc pl-4">
-              <li>First morning urine specimen is preferred.</li>
-              <li>Discard initial 15-20 ml stream and catch midstream directly into sterile container.</li>
-              <li>Collect prior to starting any antibiotic course.</li>
-            </ul>
-          </div>
-
-          <!-- Guide 4: Digital Report Delivery -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-            <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl mb-4">
-              <i class="fas fa-file-medical-alt"></i>
-            </div>
-            <h3 class="text-base font-bold text-gray-900 mb-2">Digital Report Access</h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-3">
-              Instant delivery of tamper-proof, QR-coded and digitally verified PDF reports.
-            </p>
-            <ul class="text-[11px] text-gray-500 space-y-1 list-disc pl-4">
-              <li>Direct WhatsApp PDF link sent upon release.</li>
-              <li>SMS verification notification with patient portal ID.</li>
-              <li>Physical printouts available at Budh Marg counter 7am-9pm.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. Home Phlebotomy Patna Service Callout Banner -->
-    <section class="bg-gradient-to-r from-gray-900 via-gray-800 to-sky-950 text-white py-14 border-t border-gray-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div class="max-w-2xl">
-            <div class="flex items-center gap-2 text-orange-400 text-xs font-bold uppercase tracking-wider mb-2">
-              <i class="fas fa-motorcycle"></i> Safe Home Phlebotomy Fleet
-            </div>
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              Can't visit our Budh Marg central lab?
-            </h3>
-            <p class="text-gray-300 text-sm mt-2 leading-relaxed">
-              Book a trained Sen Diagnostics certified phlebotomist for professional blood collection at your doorstep across Patna. 100% cold-chain transport ensures specimen integrity.
-            </p>
-            <div class="flex flex-wrap items-center gap-4 text-xs text-gray-400 mt-4">
-              <span><i class="fas fa-check text-emerald-400 mr-1"></i> BD Vacutainer® Closed Vacuum System</span>
-              <span><i class="fas fa-check text-emerald-400 mr-1"></i> Barcoded At Patient Bedside</span>
-              <span><i class="fas fa-check text-emerald-400 mr-1"></i> Slot: 7:00 AM – 3:00 PM Daily</span>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
-            <button onclick="openBookingModal('Home Collection Request', 0)" class="w-full sm:w-auto btn-hospital-primary px-8 py-3.5 text-sm font-bold shadow-lg shadow-sky-600/30">
-              <i class="fas fa-home mr-2"></i> Book Home Sample Collection
-            </button>
-            <a href="tel:+917481955502" class="w-full sm:w-auto btn-hospital-outline text-white border-white/30 hover:bg-white/10 px-6 py-3.5 text-sm font-semibold text-center">
-              <i class="fab fa-whatsapp text-emerald-400 mr-2"></i> WhatsApp Phlebotomy
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- 7. Global Footer (Clean Hospital Light Black / Deep Charcoal) -->
-  <footer class="footer-charcoal bg-[#111827] text-gray-300 pt-16 pb-8 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <!-- Col 1: Brand & NABL -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-sky-600 flex items-center justify-center text-white font-extrabold text-lg">
-              S
-            </div>
-            <span class="font-bold text-xl text-white tracking-tight">SEN <span class="text-orange-500 font-extrabold">DIAGNOSTICS</span></span>
+      <div class="mb-3">
+            <img src="images/sen-logo.jpg" alt="Sen Diagnostics - Since 1965" class="footer-logo-img">
           </div>
           <p class="text-xs text-gray-400 leading-relaxed">
             Sen Diagnostics Private Limited (CIN: U00092BR1990PTC004168). Established in 1965 by Dr. Dilip Sen. Eastern India's pioneer in automated diagnostics and quality pathology.
