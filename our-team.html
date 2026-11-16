@@ -159,6 +159,56 @@
       visibility: visible;
       pointer-events: auto;
     }
+    #imageModal.active img {
+      animation: modalImgLift 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes modalImgLift {
+      0% { transform: translateY(50px) scale(0.9); opacity: 0; }
+      100% { transform: translateY(0) scale(1); opacity: 1; }
+    }
+
+    /* Founder Photo 3D Lift Mechanics */
+    .founder-photo-wrap {
+      perspective: 1200px;
+      -webkit-perspective: 1200px;
+    }
+
+    .founder-photo-card {
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      will-change: transform, box-shadow;
+    }
+
+    .founder-photo-card:hover {
+      transform: translateY(-16px) scale(1.025);
+      box-shadow: 0 32px 65px -15px rgba(243, 112, 33, 0.38), 0 16px 28px -8px rgba(12, 35, 64, 0.2);
+    }
+
+    .founder-photo-card.photo-lifted {
+      animation: photoLiftAnim 1.2s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+    }
+
+    @keyframes photoLiftAnim {
+      0% { transform: translateY(0) scale(1); }
+      40% { transform: translateY(-32px) scale(1.06) rotateX(4deg); box-shadow: 0 45px 85px -15px rgba(243, 112, 33, 0.55); }
+      70% { transform: translateY(-24px) scale(1.045) rotateX(2deg); box-shadow: 0 35px 65px -12px rgba(243, 112, 33, 0.45); }
+      100% { transform: translateY(-16px) scale(1.025); }
+    }
+
+    .typewriter-cursor {
+      display: inline-block;
+      color: #F37021;
+      font-weight: 300;
+      margin-left: 2px;
+      animation: typewriter-blink 0.85s step-end infinite;
+    }
+
+    @keyframes typewriter-blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
   </style>
 </head>
 
@@ -300,6 +350,133 @@
     </div>
   </section>
 
+  <!-- ==========================================================================
+       SECTION: FOUNDER SPOTLIGHT - DR. DILIP SEN (VISIONARY & PIONEER)
+       Interactive 3D Photo Lift & Dynamic Milestone Typewriter
+       ========================================================================== -->
+  <section class="py-16 md:py-24 bg-gradient-to-b from-white via-orange-50/20 to-slate-50 border-b border-gray-200 relative overflow-hidden">
+    <div class="ambient-orb w-80 h-80 bg-orange-500/10 top-1/4 -left-20"></div>
+    <div class="ambient-orb w-80 h-80 bg-sky-500/10 bottom-1/4 -right-20"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header Badge -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 text-orange-700 text-xs font-extrabold uppercase tracking-widest border border-orange-200 mb-3 shadow-sm">
+          <i class="fas fa-crown text-orange-600"></i> The Pioneer of Laboratory Medicine in Bihar
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight font-serif mb-3">
+          Honoring Our Founder: <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">Dr. Dilip Sen</span>
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
+          Founded in a modest 8x8 room in 1965 &bull; Celebrating 60 Years of Reliability, Quality and Trust.
+        </p>
+      </div>
+
+      <!-- Main Showcase Card: Image on Left + Typewriter Details on Right -->
+      <div class="bg-white rounded-3xl border border-gray-200/90 shadow-2xl p-6 sm:p-10 lg:p-12 relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- LEFT: 3D LIFTING PORTRAIT PHOTO (Clicking lifts & opens high-res popout) -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="founder-photo-wrap w-full max-w-sm sm:max-w-md cursor-pointer group"
+                 onclick="openFounderLightbox()"
+                 title="Click to Lift & View High Definition Artwork">
+              
+              <div class="founder-photo-card relative rounded-2xl overflow-hidden border-2 border-orange-300 shadow-2xl bg-slate-900" id="founder-card-inner">
+                <img src="images/dr-dilip-sen.jpg" 
+                     alt="Dr. Dilip Sen - Founder & Visionary - Sen Diagnostics Since 1965" 
+                     class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                     id="founder-portrait-img">
+                
+                <!-- Floating 3D Lift Action Pill -->
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-gray-900/90 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-full border border-white/20 shadow-xl flex items-center gap-2 transition-all duration-300 group-hover:bg-orange-600 group-hover:scale-105">
+                  <i class="fas fa-hand-pointer text-orange-400 group-hover:text-white animate-bounce"></i>
+                  <span>Click to Lift &amp; View HD</span>
+                </div>
+
+                <!-- 60-Year Milestone Badge -->
+                <div class="absolute top-3 right-3 bg-orange-600 text-white text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
+                  1965 &bull; 60 Years
+                </div>
+              </div>
+
+              <!-- Interactive Hint -->
+              <p class="text-[11px] text-gray-500 text-center mt-3 font-medium flex items-center justify-center gap-1.5">
+                <i class="fas fa-cube text-orange-500"></i> Tap photo to lift &amp; expand portrait
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT: DETAILS WITH DYNAMIC TYPEWRITER EFFECT -->
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="text-xs font-extrabold text-orange-600 uppercase tracking-widest bg-orange-50 border border-orange-200 px-3 py-1 rounded-full">
+                Founder &amp; Visionary
+              </span>
+              <span class="text-xs text-gray-400 hidden sm:inline">&bull;</span>
+              <span class="text-xs font-bold text-gray-600 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+                MBBS (Prince of Wales Medical College, 1952)
+              </span>
+            </div>
+
+            <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 font-serif mb-3 tracking-tight">
+              Dr. Dilip Sen
+            </h3>
+
+            <!-- DYNAMIC TYPEWRITER STATEMENT BOX -->
+            <div class="bg-slate-900 rounded-2xl p-4 sm:p-5 mb-5 border border-slate-800 shadow-inner">
+              <div class="flex items-center gap-2 text-[11px] font-bold text-sky-400 uppercase tracking-wider mb-2">
+                <i class="fas fa-terminal text-orange-400"></i> Key Milestone &amp; Historical Vision:
+              </div>
+              <div class="text-amber-300 font-mono text-xs sm:text-sm font-semibold min-h-[48px] sm:min-h-[40px] flex items-center">
+                <span id="founder-typewriter-text"></span><span class="typewriter-cursor">|</span>
+              </div>
+            </div>
+
+            <!-- FULL BIOGRAPHY PARAGRAPHS (USER PROVIDED EXACT TEXT) -->
+            <div class="text-gray-700 leading-relaxed space-y-3 mb-6">
+              <p class="text-sm sm:text-base font-normal leading-relaxed text-gray-700">
+                In a modest <strong class="text-gray-900 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200">8x8 room in 1965</strong>, <strong>Dr. Dilip Sen</strong> established <em>Senslab</em>, which later became <strong>Sen Diagnostics Private Limited</strong>. His approach combined medical oversight, quality-focused laboratory practices and the adoption of emerging diagnostic technologies.
+              </p>
+              <p class="text-sm sm:text-base font-normal leading-relaxed text-gray-700">
+                Among the laboratory's early milestones was the establishment of <strong class="text-orange-600">Bihar's first privately licensed blood bank in 1969</strong>. Dr. Sen graduated in MBBS from <em>Prince of Wales Medical College in 1952</em>. Beyond medicine, he was also an accomplished photographer and a motorsports enthusiast.
+              </p>
+            </div>
+
+            <!-- 4 CLINICAL MILESTONES GRID -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-4 border-t border-gray-100">
+              <div class="bg-gray-50 border border-gray-200/80 p-2.5 rounded-xl text-center">
+                <div class="text-orange-600 text-lg mb-1"><i class="fas fa-door-open"></i></div>
+                <div class="text-xs font-bold text-gray-900">8x8 Room</div>
+                <div class="text-[10px] text-gray-500">Senslab (1965)</div>
+              </div>
+              <div class="bg-gray-50 border border-gray-200/80 p-2.5 rounded-xl text-center">
+                <div class="text-sky-600 text-lg mb-1"><i class="fas fa-tint"></i></div>
+                <div class="text-xs font-bold text-gray-900">1st Blood Bank</div>
+                <div class="text-[10px] text-gray-500">Bihar (1969)</div>
+              </div>
+              <div class="bg-gray-50 border border-gray-200/80 p-2.5 rounded-xl text-center">
+                <div class="text-emerald-600 text-lg mb-1"><i class="fas fa-user-graduate"></i></div>
+                <div class="text-xs font-bold text-gray-900">MBBS 1952</div>
+                <div class="text-[10px] text-gray-500">Prince of Wales</div>
+              </div>
+              <div class="bg-gray-50 border border-gray-200/80 p-2.5 rounded-xl text-center">
+                <div class="text-purple-600 text-lg mb-1"><i class="fas fa-camera-retro"></i></div>
+                <div class="text-xs font-bold text-gray-900">Photographer</div>
+                <div class="text-[10px] text-gray-500">&amp; Motorsports</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- SECTION 2: INTERACTIVE TEAM & FACILITY PHOTO GALLERY (ALL 8 IMAGES WITH 3D HOVER) -->
   <section class="py-16 md:py-24 bg-slate-50 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -367,23 +544,23 @@
         </div>
 
         <!-- Photo 3 -->
-        <div class="team-card-3d cursor-pointer" onclick="openLightbox('images/team/team-3.jpg', 'Dr. Dilip Sen - Founder (1965)', 'Pioneer of laboratory medicine in Bihar who founded the lab in an 8x8 room in 1965.')">
+        <div class="team-card-3d cursor-pointer" onclick="openLightbox('images/dr-dilip-sen.jpg', 'Dr. Dilip Sen - Founder &amp; Visionary (1965)', 'In a modest 8x8 room in 1965, Dr. Dilip Sen established Senslab (now Sen Diagnostics). Established Bihar\'s 1st licensed blood bank in 1969. MBBS from Prince of Wales Medical College in 1952. Beyond medicine, an accomplished photographer and motorsports enthusiast.')">
           <div class="team-card-inner">
             <div class="team-img-wrap">
-              <img src="images/team/team-3.jpg" alt="Dr. Dilip Sen Founder" loading="lazy">
+              <img src="images/dr-dilip-sen.jpg" alt="Dr. Dilip Sen Founder &amp; Visionary" loading="lazy">
               <div class="expand-btn"><i class="fas fa-expand-alt"></i></div>
             </div>
             <div class="p-5 flex-1 flex flex-col justify-between">
               <div>
                 <span class="text-[11px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full inline-block mb-2">
-                  Heritage (1965)
+                  Founder &bull; Estd. 1965
                 </span>
                 <h3 class="text-base font-bold text-gray-900 leading-snug">Dr. Dilip Sen - Founder</h3>
-                <p class="text-xs text-gray-500 mt-2 line-clamp-2">Started in 1965 in an 8x8 room; founded Bihar's 1st private licensed blood bank in 1969.</p>
+                <p class="text-xs text-gray-500 mt-2 line-clamp-2">Pioneer of laboratory medicine in Bihar. MBBS 1952, established Bihar's 1st private blood bank in 1969.</p>
               </div>
               <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
-                <span><i class="fas fa-landmark text-amber-500 mr-1"></i> 60 Years Trust</span>
-                <span class="text-orange-500 font-semibold">View <i class="fas fa-arrow-right text-[10px] ml-0.5"></i></span>
+                <span><i class="fas fa-crown text-amber-500 mr-1"></i> Visionary</span>
+                <span class="text-orange-500 font-semibold">View HD <i class="fas fa-arrow-right text-[10px] ml-0.5"></i></span>
               </div>
             </div>
           </div>
@@ -682,6 +859,69 @@
       modal.classList.remove('active');
       document.body.style.overflow = '';
     }
+
+    // 3D Photo Lift & Expand for Dr. Dilip Sen Portrait
+    function openFounderLightbox() {
+      const card = document.getElementById('founder-card-inner');
+      if (card) {
+        card.classList.add('photo-lifted');
+        setTimeout(() => card.classList.remove('photo-lifted'), 1300);
+      }
+      openLightbox(
+        'images/dr-dilip-sen.jpg', 
+        'Dr. Dilip Sen (Founder & Visionary)', 
+        'In a modest 8x8 room in 1965, Dr. Dilip Sen established Senslab, which later became Sen Diagnostics Private Limited. His approach combined medical oversight, quality-focused laboratory practices and the adoption of emerging diagnostic technologies. Among the laboratory\'s early milestones was the establishment of Bihar\'s first privately licensed blood bank in 1969. Dr. Sen graduated in MBBS from Prince of Wales Medical College in 1952. Beyond medicine, he was also an accomplished photographer and a motorsports enthusiast.'
+      );
+    }
+
+    // Dynamic Typewriter Effect for Dr. Dilip Sen's Key Milestones
+    function initFounderTypewriter() {
+      const el = document.getElementById('founder-typewriter-text');
+      if (!el) return;
+
+      const milestones = [
+        "In a modest 8x8 room in 1965, Dr. Dilip Sen established Senslab.",
+        "Established Bihar's first privately licensed blood bank in 1969.",
+        "Graduated in MBBS from Prince of Wales Medical College in 1952.",
+        "Pioneered medical oversight, quality systems & diagnostic automation.",
+        "An accomplished physician, photographer & motorsports enthusiast."
+      ];
+
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function typeTick() {
+        const current = milestones[phraseIndex];
+
+        if (isDeleting) {
+          charIndex--;
+          el.textContent = current.substring(0, charIndex);
+          if (charIndex <= 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % milestones.length;
+            setTimeout(typeTick, 400);
+            return;
+          }
+          setTimeout(typeTick, 28);
+        } else {
+          charIndex++;
+          el.textContent = current.substring(0, charIndex);
+          if (charIndex >= current.length) {
+            isDeleting = true;
+            setTimeout(typeTick, 2400);
+            return;
+          }
+          setTimeout(typeTick, 55);
+        }
+      }
+
+      setTimeout(typeTick, 600);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initFounderTypewriter();
+    });
 
     document.getElementById('imageModal').addEventListener('click', function(e) {
       if (e.target === this) closeLightbox();
