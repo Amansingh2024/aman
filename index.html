@@ -133,59 +133,59 @@
   <!-- ==========================================================================
        HERO SECTION WITH 3D CANVAS & PERSPECTIVE CARD
        ========================================================================== -->
-  <section class="relative min-h-[85vh] flex items-center py-16 bg-white overflow-hidden border-b border-gray-200">
+  <section class="relative flex items-center py-6 sm:py-8 lg:py-10 bg-white overflow-hidden border-b border-gray-200">
     <!-- 3D Molecular Simulation Canvas -->
     <div id="canvas3d-container" class="absolute inset-0 pointer-events-none z-0"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
         
         <!-- Left Hero Text -->
         <div class="lg:col-span-7">
-          <div class="inline-flex items-center gap-2 bg-gray-100 border border-gray-300/80 px-4 py-1.5 rounded-full text-xs font-bold text-gray-800 mb-6 shadow-sm">
+          <div class="inline-flex items-center gap-2 bg-gray-100 border border-gray-300/80 px-3.5 py-1 rounded-full text-xs font-bold text-gray-800 mb-3 shadow-sm">
             <span class="bg-orange-600 text-white text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider font-extrabold">Established 1965</span>
             <span>60 Years of Laboratory Medicine in Bihar</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-[1.15] mb-6">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15] mb-3">
             Advancing Laboratory <br>
             <span class="text-sky-600">Medicine in Bihar</span>
           </h1>
 
-          <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl font-normal">
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 max-w-xl font-normal">
             Three generations of medical oversight, clinical pathology, and advanced diagnostic automation. Serving patients, physicians, and hospitals across Patna and Bihar with unquestionable reporting accuracy.
           </p>
 
           <!-- Accreditation Badges -->
-          <div class="flex flex-wrap items-center gap-4 p-4 bg-gray-50 border border-gray-200 rounded-2xl mb-8">
-            <div class="flex items-center gap-2 text-xs font-bold text-gray-800">
-              <i class="fas fa-check-circle text-emerald-600 text-base"></i> NABL Accredited (MC-6584)
+          <div class="flex flex-wrap items-center gap-3 p-2.5 sm:p-3 bg-gray-50 border border-gray-200 rounded-xl mb-4">
+            <div class="flex items-center gap-1.5 text-xs font-bold text-gray-800">
+              <i class="fas fa-check-circle text-emerald-600 text-sm"></i> NABL Accredited (MC-6584)
             </div>
-            <div class="h-4 w-px bg-gray-300 hidden sm:block"></div>
-            <div class="flex items-center gap-2 text-xs font-bold text-gray-800">
-              <i class="fas fa-shield-alt text-sky-600 text-base"></i> ISHTM-AIIMS EQAP Registered
+            <div class="h-3.5 w-px bg-gray-300 hidden sm:block"></div>
+            <div class="flex items-center gap-1.5 text-xs font-bold text-gray-800">
+              <i class="fas fa-shield-alt text-sky-600 text-sm"></i> ISHTM-AIIMS EQAP Registered
             </div>
-            <div class="h-4 w-px bg-gray-300 hidden sm:block"></div>
-            <div class="flex items-center gap-2 text-xs font-bold text-gray-800">
-              <i class="fas fa-award text-orange-600 text-base"></i> ISO 9001:2015 Certified
+            <div class="h-3.5 w-px bg-gray-300 hidden sm:block"></div>
+            <div class="flex items-center gap-1.5 text-xs font-bold text-gray-800">
+              <i class="fas fa-award text-orange-600 text-sm"></i> ISO 9001:2015 Certified
             </div>
           </div>
 
           <!-- Hero Action Buttons -->
-          <div class="flex flex-wrap items-center gap-4 mb-10">
-            <a href="packages.html" class="btn-hospital-dark">
+          <div class="flex flex-wrap items-center gap-3 mb-5">
+            <a href="packages.html" class="btn-hospital-dark text-xs sm:text-sm py-2 px-3.5">
               <i class="fas fa-notes-medical mr-1"></i> Health Packages (3D Flip)
             </a>
-            <a href="test-list.html" class="btn-hospital-outline">
+            <a href="test-list.html" class="btn-hospital-outline text-xs sm:text-sm py-2 px-3.5">
               <i class="fas fa-search mr-1"></i> Search 30+ Tests
             </a>
-            <a href="tel:+917481953528" class="btn-hospital-primary">
+            <a href="tel:+917481953528" class="btn-hospital-primary text-xs sm:text-sm py-2 px-3.5">
               <i class="fas fa-phone-alt mr-1"></i> Call: +91 74819 53528
             </a>
           </div>
 
           <!-- Stats Grid -->
-          <div class="grid grid-cols-3 gap-2 sm:gap-6 pt-6 border-t border-gray-200 max-w-lg text-center sm:text-left">
+          <div class="grid grid-cols-3 gap-2 sm:gap-6 pt-3 border-t border-gray-200 max-w-lg text-center sm:text-left">
             <div>
               <div class="text-2xl sm:text-3xl font-extrabold text-gray-900">60+</div>
               <div class="text-[10px] sm:text-xs font-semibold text-gray-500 uppercase tracking-wider">Years Legacy</div>
@@ -201,34 +201,34 @@
           </div>
         </div>
 
-        <!-- Right 3D Perspective Card -->
+        <!-- Right 3D Perspective Card (Compact & High-Density) -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="w-full max-w-md bg-white border border-gray-200 rounded-3xl p-5 sm:p-8 shadow-2xl relative" data-3d-tilt>
-            <div class="w-14 h-14 bg-gray-900 text-sky-400 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md">
+          <div class="w-full max-w-sm lg:max-w-md bg-white border border-gray-200 rounded-2xl p-4 sm:p-5 lg:p-6 shadow-xl relative" data-3d-tilt>
+            <div class="w-10 h-10 bg-gray-900 text-sky-400 rounded-xl flex items-center justify-center text-lg mb-3 shadow-sm">
               <i class="fas fa-dna"></i>
             </div>
-            <span class="inline-block bg-orange-100 text-orange-700 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
+            <span class="inline-block bg-orange-100 text-orange-700 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider mb-1.5">
               PREVENTIVE WELLNESS
             </span>
-            <h3 class="text-2xl font-extrabold text-gray-900 mb-2">Sen 360 Health Profile</h3>
-            <div class="text-4xl font-extrabold text-gray-900 mb-4">
-              ₹4,800 <span class="text-sm font-normal text-gray-500">/ Complete Checkup</span>
+            <h3 class="text-lg sm:text-xl font-extrabold text-gray-900 mb-1">Sen 360 Health Profile</h3>
+            <div class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2">
+              ₹4,800 <span class="text-xs font-normal text-gray-500">/ Complete Checkup</span>
             </div>
-            <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+            <p class="text-xs text-gray-600 mb-3 leading-relaxed">
               Exhaustive full-body screening covering heart, liver, kidney, diabetes, thyroid, vitamins, inflammation & urine analysis with same-day reports.
             </p>
 
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="bg-gray-100 text-gray-700 text-xs font-bold px-3 py-1 rounded-full border border-gray-200">80+ Essential Tests</span>
-              <span class="bg-gray-100 text-gray-700 text-xs font-bold px-3 py-1 rounded-full border border-gray-200">Same Day Delivery</span>
-              <span class="bg-gray-100 text-gray-700 text-xs font-bold px-3 py-1 rounded-full border border-gray-200">Fasting/Random</span>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="bg-gray-100 text-gray-700 text-[10px] font-bold px-2 py-0.5 rounded-md border border-gray-200">80+ Essential Tests</span>
+              <span class="bg-gray-100 text-gray-700 text-[10px] font-bold px-2 py-0.5 rounded-md border border-gray-200">Same Day Delivery</span>
+              <span class="bg-gray-100 text-gray-700 text-[10px] font-bold px-2 py-0.5 rounded-md border border-gray-200">Fasting/Random</span>
             </div>
 
-            <div class="flex gap-3">
-              <a href="packages.html" class="btn-hospital-outline text-xs flex-1 justify-center py-2.5">
+            <div class="flex gap-2.5">
+              <a href="packages.html" class="btn-hospital-outline text-xs flex-1 justify-center py-2">
                 <i class="fas fa-sync-alt mr-1"></i> Flip for Tests
               </a>
-              <button class="btn-hospital-orange text-xs flex-1 justify-center py-2.5" onclick="openBookingModal('Sen 360 Health Profile (with Urine)', 4800)">
+              <button class="btn-hospital-orange text-xs flex-1 justify-center py-2" onclick="openBookingModal('Sen 360 Health Profile (with Urine)', 4800)">
                 <i class="fas fa-bolt mr-1"></i> Book Now
               </button>
             </div>
@@ -242,19 +242,19 @@
   <!-- ==========================================================================
        POPULAR HEALTH PACKAGES SECTION (FEATURED 3D FLIP CARDS)
        ========================================================================== -->
-  <section class="py-20 bg-slate-50 border-b border-gray-200">
+  <section class="py-8 sm:py-10 lg:py-12 bg-slate-50 border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-extrabold text-orange-600 uppercase tracking-widest bg-orange-100 border border-orange-200 px-3.5 py-1.5 rounded-full inline-block mb-3">
+      <div class="text-center max-w-3xl mx-auto mb-6 lg:mb-8">
+        <span class="text-[11px] font-extrabold text-orange-600 uppercase tracking-widest bg-orange-100 border border-orange-200 px-3 py-1 rounded-full inline-block mb-2">
           Comprehensive Health Profiles
         </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2">
           Book Our Complete <span class="text-orange-600">Health Packages</span>
         </h2>
-        <p class="text-gray-600 text-base mb-4">
+        <p class="text-gray-600 text-xs sm:text-sm mb-3">
           Hover, tilt, or click each card to experience the <strong>3D Flip-Flop Effect</strong> and view the exhaustive medical checklist on the back side.
         </p>
-        <div class="inline-flex items-center flex-wrap justify-center gap-3 text-xs font-semibold text-gray-500 bg-white border border-gray-200 px-4 py-1.5 rounded-full shadow-sm">
+        <div class="inline-flex items-center flex-wrap justify-center gap-2.5 text-[11px] font-semibold text-gray-500 bg-white border border-gray-200 px-3.5 py-1 rounded-full shadow-sm">
           <span><i class="fas fa-hand-pointer text-orange-500 mr-1"></i> Click / Tap Card</span>
           <span class="text-gray-300 hidden sm:inline">&bull;</span>
           <span><i class="fas fa-arrows-left-right text-sky-500 mr-1"></i> Swipe on Touch</span>
@@ -264,17 +264,17 @@
       </div>
 
       <!-- Interactive Category Filter Tabs (Home Showcase) -->
-      <div class="flex justify-center flex-wrap gap-2.5 mb-12">
-        <button class="tab-filter-package bg-[#F37021] text-white border-[#F37021] shadow-md px-5 py-2.5 rounded-full text-xs font-bold transition-all" data-filter="all">All Packages (12)</button>
-        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-5 py-2.5 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="wellness">Wellness Profiles</button>
-        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-5 py-2.5 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="cardiac">Cardiac Health</button>
-        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-5 py-2.5 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="diabetes">Diabetes Care</button>
-        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-5 py-2.5 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="women">Women's Health</button>
-        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-5 py-2.5 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="specialized">Surgical &amp; Hematology</button>
+      <div class="flex justify-center flex-wrap gap-2 mb-6 lg:mb-8">
+        <button class="tab-filter-package bg-[#F37021] text-white border-[#F37021] shadow-md px-4 py-1.5 rounded-full text-xs font-bold transition-all" data-filter="all">All Packages (12)</button>
+        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-4 py-1.5 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="wellness">Wellness Profiles</button>
+        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-4 py-1.5 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="cardiac">Cardiac Health</button>
+        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-4 py-1.5 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="diabetes">Diabetes Care</button>
+        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-4 py-1.5 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="women">Women's Health</button>
+        <button class="tab-filter-package bg-white text-gray-700 border border-gray-300 px-4 py-1.5 rounded-full text-xs font-bold hover:border-gray-500 shadow-sm transition-all" data-filter="specialized">Surgical &amp; Hematology</button>
       </div>
 
       <!-- 12 3D Flip Cards Grid (Full HD Content) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
         
         <!-- 1. Sen 360 Health Profile -->
         <div class="flip-card-3d-wrap" data-category="wellness">
@@ -1361,16 +1361,16 @@
   <!-- ==========================================================================
        60-YEAR INTERACTIVE 3D MILESTONE TREE (SENLABS HERITAGE)
        ========================================================================== -->
-  <section class="py-20 bg-white border-b border-gray-200">
+  <section class="py-10 sm:py-12 lg:py-14 bg-white border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <span class="text-xs font-extrabold text-orange-600 uppercase tracking-widest bg-orange-100 border border-orange-200 px-3.5 py-1.5 rounded-full inline-block mb-3">
+      <div class="text-center max-w-3xl mx-auto mb-8">
+        <span class="text-xs font-extrabold text-orange-600 uppercase tracking-widest bg-orange-100 border border-orange-200 px-3 py-1 rounded-full inline-block mb-2">
           Six Decades of Innovation Since 1965
         </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2">
           Sen Diagnostics <span class="text-orange-600">Timeline & Care Tree</span>
         </h2>
-        <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
+        <p class="text-gray-600 text-xs sm:text-sm max-w-2xl mx-auto">
           Scroll down to watch milestones emerge along our tree. <strong>Click any milestone card to float it in 3D</strong> and explore regional diagnostic breakthroughs.
         </p>
       </div>
@@ -1541,16 +1541,16 @@
   <!-- ==========================================================================
        QUICK TEST DIRECTORY SEARCH PREVIEW
        ========================================================================== -->
-  <section class="py-16 bg-white border-b border-gray-200">
+  <section class="py-8 sm:py-10 lg:py-12 bg-white border-b border-gray-200">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gray-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+      <div class="bg-gray-900 rounded-2xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
         <div class="relative z-10">
-          <div class="max-w-2xl mb-8">
-            <span class="text-xs font-bold text-sky-400 uppercase tracking-widest bg-sky-950 px-3 py-1 rounded-full border border-sky-800 inline-block mb-3">
+          <div class="max-w-2xl mb-6">
+            <span class="text-xs font-bold text-sky-400 uppercase tracking-widest bg-sky-950 px-3 py-1 rounded-full border border-sky-800 inline-block mb-2">
               Diagnostic Tariff & Catalog
             </span>
-            <h3 class="text-3xl font-extrabold text-white mb-2">Need a Specific Laboratory Investigation?</h3>
-            <p class="text-gray-400 text-sm">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">Need a Specific Laboratory Investigation?</h3>
+            <p class="text-gray-400 text-xs sm:text-sm">
               Search across individual blood, urine, culture, and hormone tests with live pricing and preparation requirements.
             </p>
           </div>

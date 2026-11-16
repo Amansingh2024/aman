@@ -342,7 +342,7 @@ a:hover {
 .flip-card-3d-wrap {
   perspective: 1600px;
   -webkit-perspective: 1600px;
-  height: 575px;
+  height: 425px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   touch-action: pan-y;
@@ -353,7 +353,7 @@ a:hover {
 }
 
 .flip-card-3d-wrap:hover {
-  transform: translateY(-8px) scale(1.012);
+  transform: translateY(-6px) scale(1.01);
 }
 
 .flip-card-3d-wrap:active {
@@ -386,10 +386,10 @@ a:hover {
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   border-radius: var(--radius-lg);
-  padding: 1.75rem;
+  padding: 1.15rem 1.25rem !important;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start !important;
   overflow: hidden;
 }
 
@@ -487,15 +487,15 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.45rem;
 }
 
 .badge-clinical {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.35rem 0.85rem;
+  letter-spacing: 0.04em;
+  padding: 0.22rem 0.65rem;
   border-radius: var(--radius-pill);
 }
 
@@ -568,30 +568,33 @@ a:hover {
 }
 
 .card-package-title {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: #0C2340;
-  margin-bottom: 0.6rem;
-  line-height: 1.3;
+  margin-bottom: 0.35rem;
+  line-height: 1.25;
 }
 
 .card-package-description {
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   color: #4B5563;
-  line-height: 1.55;
-  margin-bottom: 1rem;
-  flex-grow: 1;
+  line-height: 1.4;
+  margin-bottom: 0.65rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .card-specs-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  gap: 0.35rem;
   background: #F1F5F9;
   border: 1px solid #E2E8F0;
-  padding: 0.7rem 0.85rem;
-  border-radius: var(--radius-md);
-  margin-bottom: 1rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.65rem;
 }
 
 .spec-strip-box {
@@ -600,7 +603,7 @@ a:hover {
 }
 
 .spec-strip-box span.lbl {
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: 700;
   color: #64748B;
   text-transform: uppercase;
@@ -608,7 +611,7 @@ a:hover {
 }
 
 .spec-strip-box span.val {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
   color: #0F172A;
   margin-top: 0.1rem;
@@ -620,13 +623,13 @@ a:hover {
   justify-content: space-between;
   background: #F8FAFC;
   border: 1.5px solid #E2E8F0;
-  border-radius: var(--radius-md);
-  padding: 0.75rem 1rem;
-  margin-top: auto;
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.85rem;
+  margin-top: auto !important;
 }
 
 .price-text-large {
-  font-size: 1.65rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: #F37021;
   line-height: 1;
@@ -635,12 +638,12 @@ a:hover {
 .btn-trigger-flip {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.35rem;
   background: #0C2340;
   color: #FFFFFF !important;
   font-weight: 700;
-  font-size: 0.82rem;
-  padding: 0.58rem 1.05rem;
+  font-size: 0.78rem;
+  padding: 0.45rem 0.85rem;
   border-radius: var(--radius-pill);
   border: 1.5px solid #0C2340;
   cursor: pointer;
@@ -707,33 +710,33 @@ a:hover {
 /* Back Face Header & Items */
 .back-face-header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  padding-bottom: 0.75rem;
-  margin-bottom: 0.85rem;
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.55rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .back-face-header h4 {
   color: #FFFFFF;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  margin-bottom: 0.2rem;
-  line-height: 1.3;
+  margin-bottom: 0.15rem;
+  line-height: 1.25;
 }
 
 .back-face-header span {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #38BDF8;
   font-weight: 600;
 }
 
 .back-test-scroll-area {
   overflow-y: auto;
-  max-height: 300px;
+  max-height: 250px;
   padding-right: 0.4rem;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.6rem;
   flex-grow: 1;
 }
 
@@ -836,16 +839,16 @@ a:hover {
 .inner-page-hero {
   background: linear-gradient(180deg, #111827 0%, #1F2937 100%);
   color: #FFFFFF;
-  padding: 4.5rem 0 4rem;
+  padding: 2.75rem 0 2.5rem;
   position: relative;
   border-bottom: 1px solid #374151;
 }
 
 .inner-page-hero h1 {
   color: #FFFFFF;
-  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-size: clamp(1.85rem, 3vw, 2.5rem);
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .inner-page-hero p {
@@ -1555,7 +1558,7 @@ body {
 
   /* Flip card touch optimization for smartphones */
   .flip-card-3d-wrap {
-    height: 590px;
+    height: 450px !important;
     touch-action: pan-y;
   }
   
@@ -1607,24 +1610,24 @@ body {
 
   /* 3-Column Package Cards on Laptops */
   .flip-card-3d-wrap {
-    height: 590px !important;
+    height: 425px !important;
   }
 
   .card-package-title {
-    font-size: 1.2rem !important;
+    font-size: 1.15rem !important;
   }
 
   .card-specs-strip {
     gap: 0.3rem !important;
-    padding: 0.5rem 0.65rem !important;
+    padding: 0.45rem 0.55rem !important;
   }
 
   .spec-strip-box span.lbl {
-    font-size: 0.62rem !important;
+    font-size: 0.6rem !important;
   }
 
   .spec-strip-box span.val {
-    font-size: 0.78rem !important;
+    font-size: 0.75rem !important;
   }
 }
 
@@ -1639,7 +1642,7 @@ body {
   }
 
   .flip-card-3d-wrap {
-    height: 610px !important;
+    height: 430px !important;
   }
 }
 
@@ -1658,7 +1661,7 @@ body {
   }
 
   .flip-card-3d-wrap {
-    height: 620px !important;
+    height: 440px !important;
   }
 }
 
@@ -1768,7 +1771,7 @@ body {
   }
   
   .flip-card-3d-wrap {
-    height: 610px;
+    height: 470px !important;
   }
 }
 
@@ -2092,7 +2095,7 @@ body {
 
   /* Flip Cards Touch & Alignment on Smartphones */
   .flip-card-3d-wrap {
-    height: 595px !important;
+    height: 450px !important;
     width: 100% !important;
     max-width: 100% !important;
     touch-action: pan-y !important;
@@ -2109,7 +2112,7 @@ body {
 
 @media (max-width: 380px) {
   .flip-card-3d-wrap {
-    height: 620px !important;
+    height: 470px !important;
   }
   
   .mobile-action-tab {
