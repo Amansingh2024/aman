@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initMobileNav();
   initTimelineTree();
+  initHeroTypewriter();
 });
 
 /* ==========================================================================
@@ -780,5 +781,56 @@ function initTimelineTree() {
         targetItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     });
+  }
+}
+
+/* ==========================================================================
+   Hero Dynamic Typewriter Effect (Specialties & Heritage Showcase)
+   ========================================================================== */
+function initHeroTypewriter() {
+  const el = document.getElementById('hero-typewriter');
+  if (!el) return;
+
+  const phrases = [
+    'Medicine in Bihar',
+    'Clinical Pathology',
+    'Diagnostic Accuracy',
+    'Healthcare Since 1965',
+    'Automated Blood Testing',
+    'EQAP Quality Standards'
+  ];
+
+  let phraseIndex = 0;
+  let charIndex = phrases[0].length;
+  let isDeleting = false;
+
+  // Let initial text remain visible for 2.5 seconds
+  setTimeout(tick, 2500);
+
+  function tick() {
+    const current = phrases[phraseIndex];
+
+    if (isDeleting) {
+      charIndex--;
+      el.textContent = current.substring(0, charIndex);
+
+      if (charIndex <= 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(tick, 450); // Pause before starting next phrase
+        return;
+      }
+      setTimeout(tick, 40); // Fast, snappy backspacing
+    } else {
+      charIndex++;
+      el.textContent = current.substring(0, charIndex);
+
+      if (charIndex >= current.length) {
+        isDeleting = true;
+        setTimeout(tick, 2200); // Read time before deleting
+        return;
+      }
+      setTimeout(tick, 85); // Natural typing speed
+    }
   }
 }
