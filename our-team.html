@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/jpeg" href="images/sen-logo.jpg">
+  <link rel="apple-touch-icon" href="images/sen-logo.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0C2340">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Sen Diagnostics">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>Our Team & Journey | Sen Diagnostics (Since 1965) | Patna, Bihar</title>
+  <meta name="description" content="Discover the team, history, and medical legacy of Sen Diagnostics. Founded by Dr. Dilip Sen in 1965, evolving across three generations of diagnostic excellence in Bihar.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hospital: {
+              navy: '#0C2340',
+              orange: '#F37021',
+              charcoal: '#111827',
+              slate: '#1E293B',
+              ice: '#F8FAFC',
+              sky: '#0284C7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Pro 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Brand Styling & Alignment Engine -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Custom Team Page Visual Effects */
+    .team-hero-bg {
+      background: radial-gradient(circle at 20% 30%, rgba(243, 112, 33, 0.12) 0%, transparent 45%),
+                  radial-gradient(circle at 80% 70%, rgba(2, 132, 199, 0.15) 0%, transparent 50%),
+                  linear-gradient(135deg, #0C2340 0%, #081628 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ambient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      animation: orbFloat 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes orbFloat {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(40px, -30px) scale(1.15); }
+      100% { transform: translate(-30px, 40px) scale(0.9); }
+    }
+
+    .team-card-3d {
+      perspective: 1200px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .team-card-inner {
+      background: #FFFFFF;
+      border-radius: 1.25rem;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      box-shadow: 0 10px 30px -10px rgba(12, 35, 64, 0.08);
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .team-card-3d:hover .team-card-inner {
+      transform: translateY(-8px) scale(1.015);
+      border-color: rgba(243, 112, 33, 0.4);
+      box-shadow: 0 25px 45px -12px rgba(12, 35, 64, 0.18), 0 0 25px rgba(243, 112, 33, 0.12);
+    }
+
+    .team-img-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: #0C2340;
+    }
+
+    .team-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+    }
+
+    .team-card-3d:hover .team-img-wrap img {
+      transform: scale(1.08);
+    }
+
+    .team-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(12, 35, 64, 0.75) 100%);
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .expand-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 9999px;
+      background: rgba(12, 35, 64, 0.75);
+      backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .team-card-3d:hover .expand-btn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .expand-btn:hover {
+      background: #F37021;
+      transform: scale(1.1);
+    }
+
+    /* Lightbox Modal */
+    #imageModal {
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    #imageModal.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-gray-800 font-sans antialiased">
+
+  <!-- TOP EMERGENCY & NABL NOTIFICATION STRIP -->
+  <div class="top-nav-announcement">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between py-1.5 text-xs text-slate-300 gap-2">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-orange-600 text-white uppercase tracking-wider">
+            NABL Accredited
+          </span>
+          <span class="font-medium text-slate-200">MC-6584 | Registered with ISHTM-AIIMS EQAP New Delhi</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="tel:+917481955502" class="hover:text-orange-400 transition-colors flex items-center gap-1">
+            <i class="fas fa-phone-alt text-orange-500"></i> +91 74819 55502
+          </a>
+          <span class="hidden md:inline-flex items-center gap-1.5 text-slate-400">
+            <i class="fas fa-clock text-orange-500"></i> Mon-Sat: 7AM - 9PM | Sun: 7AM - 6PM
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION BAR -->
+  <header class="hospital-nav">
+    <div class="nav-container-flex">
+      <a href="index.html" class="hospital-brand" aria-label="Sen Diagnostics - Established 1965">
+        <img src="images/sen-logo.jpg" alt="Sen Diagnostics - The Pioneer of Laboratory Medicine in Bihar - Since 1965" class="hospital-brand-logo">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-links-menu">
+          <li><a href="index.html" class="nav-link-btn">Home</a></li>
+          <li><a href="about.html" class="nav-link-btn">About Us</a></li>
+          <li><a href="our-team.html" class="nav-link-btn active">Our Team</a></li>
+          <li><a href="packages.html" class="nav-link-btn">Health Packages</a></li>
+          <li><a href="test-list.html" class="nav-link-btn">Test Directory</a></li>
+          <li><a href="center-facility.html" class="nav-link-btn">Center Facility</a></li>
+          <li><a href="contact-us.html" class="nav-link-btn">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button class="btn-hospital-orange text-sm hidden sm:inline-flex" onclick="openBookingModal('General Health Checkup', 2500)">
+          <i class="fas fa-calendar-check mr-1"></i> Book Home Collection
+        </button>
+        <button id="mobile-nav-toggle" class="md:hidden p-2 text-gray-800 hover:text-sky-600 focus:outline-none" aria-label="Toggle menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-4 shadow-xl">
+      <div class="flex flex-col gap-3 font-semibold text-gray-700">
+        <a href="index.html" class="hover:text-sky-600 py-1">Home</a>
+        <a href="about.html" class="hover:text-sky-600 py-1">About Us</a>
+        <a href="our-team.html" class="text-orange-600 font-bold py-1">Our Team & Journey</a>
+        <a href="packages.html" class="hover:text-sky-600 py-1">Health Packages</a>
+        <a href="test-list.html" class="hover:text-sky-600 py-1">Test Directory</a>
+        <a href="center-facility.html" class="hover:text-sky-600 py-1">Center Facility</a>
+        <a href="contact-us.html" class="hover:text-sky-600 py-1">Contact Us</a>
+        <button class="btn-hospital-orange text-sm w-full mt-2" onclick="openBookingModal('General Health Checkup', 2500)">
+          <i class="fas fa-calendar-check mr-1"></i> Book Home Collection
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: OUR JOURNEY & TEAM -->
+  <section class="team-hero-bg text-white py-16 md:py-24 relative">
+    <div class="ambient-orb w-96 h-96 bg-orange-600/15 top-10 left-10"></div>
+    <div class="ambient-orb w-96 h-96 bg-sky-500/15 bottom-10 right-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-orange-400 text-xs font-bold uppercase tracking-wider mb-6">
+          <i class="fas fa-users-medical"></i> Clinical Leadership & Heritage
+        </div>
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight font-serif mb-6">
+          Our Team & <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Journey</span>
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+          Three generations of medical leadership, dedicated pathologists, and state-of-the-art diagnostic automation serving Bihar since 1965.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: OUR JOURNEY & LEGACY OF EXCELLENCE (USER PROVIDED TEXT) -->
+  <section class="py-16 md:py-20 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <!-- Story Column 1: Our Journey -->
+        <div class="bg-gradient-to-br from-slate-50 to-orange-50/40 p-8 sm:p-10 rounded-3xl border border-orange-100 shadow-sm relative overflow-hidden">
+          <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl"></div>
+          <div class="w-12 h-12 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-xl mb-6 shadow-md shadow-orange-500/30">
+            <i class="fas fa-route"></i>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight mb-4 font-serif">
+            Our Journey
+          </h2>
+          <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-6 font-normal">
+            From our central laboratory and network of service points across the region, Sen Diagnostics provides a comprehensive range of diagnostic services, with testing performed at our central facility. Since 1965, the laboratory has evolved across three generations, integrating advances in laboratory medicine, automation and diagnostic technology while maintaining a continued focus on quality systems, medical oversight and dependable laboratory services.
+          </p>
+          <div class="flex items-center gap-4 text-xs font-bold text-orange-700 uppercase tracking-wider">
+            <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-orange-500"></i> Central Facility</span>
+            <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-orange-500"></i> 3 Generations</span>
+            <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-orange-500"></i> Quality Systems</span>
+          </div>
+        </div>
+
+        <!-- Story Column 2: Legacy of Excellence -->
+        <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 p-8 sm:p-10 rounded-3xl text-white shadow-xl relative overflow-hidden border border-slate-700">
+          <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-sky-500/15 rounded-full blur-2xl"></div>
+          <div class="w-12 h-12 rounded-2xl bg-sky-500 text-white flex items-center justify-center text-xl mb-6 shadow-md shadow-sky-500/30">
+            <i class="fas fa-award"></i>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-4 font-serif">
+            Legacy of Excellence
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 font-light">
+            Founded by <strong>Dr. Dilip Sen in 1965</strong>, our laboratory began in a modest <strong>8x8 room</strong> and evolved over three generations into Sen Diagnostics Private Limited. Throughout this journey, the laboratory has continued to adopt advances in laboratory medicine and diagnostic technology. Its milestones include the establishment of <strong>Bihar's first privately licensed blood bank in 1969</strong> and the introduction of several laboratory technologies to the region over the decades.
+          </p>
+          <div class="flex items-center gap-4 text-xs font-bold text-sky-400 uppercase tracking-wider">
+            <span class="flex items-center gap-1.5"><i class="fas fa-certificate text-sky-400"></i> Estd. 1965</span>
+            <span class="flex items-center gap-1.5"><i class="fas fa-tint text-sky-400"></i> 1st Blood Bank (1969)</span>
+            <span class="flex items-center gap-1.5"><i class="fas fa-microscope text-sky-400"></i> NABL Accredited</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: INTERACTIVE TEAM & FACILITY PHOTO GALLERY (ALL 8 IMAGES WITH 3D HOVER) -->
+  <section class="py-16 md:py-24 bg-slate-50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-orange-600 text-xs font-extrabold tracking-widest uppercase mb-2 block">
+          Visual Heritage & Clinical Infrastructure
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight font-serif mb-4">
+          Our Team, Founders & Advanced Laboratory
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600">
+          Click on any photo to view in high definition. Every image reflects our 60-year commitment to clinical accuracy and compassionate care.
+        </p>
+      </div>
+
+      <!-- Photo Grid (8 Images) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+        
+        <!-- Photo 1 -->
+        <div class="team-card-3d cursor-pointer" onclick="openLightbox('images/team/team-1.jpg', 'Founders & Medical Directors', 'Dr. Dilip Sen & multi-generational leaders of Sen Diagnostics.')">
+          <div class="team-card-inner">
+            <div class="team-img-wrap">
+              <img src="images/team/team-1.jpg" alt="Founders & Medical Directors" loading="lazy">
+              <div class="expand-btn"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded-full inline-block mb-2">
+                  Leadership
+                </span>
+                <h3 class="text-base font-bold text-gray-900 leading-snug">Founders & Medical Directors</h3>
+                <p class="text-xs text-gray-500 mt-2 line-clamp-2">Three generations of clinical leadership guiding diagnostic protocols.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
+                <span><i class="fas fa-shield-halved text-emerald-500 mr-1"></i> Medical Oversight</span>
+                <span class="text-orange-500 font-semibold">View <i class="fas fa-arrow-right text-[10px] ml-0.5"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="team-card-3d cursor-pointer" onclick="openLightbox('images/team/team-2.jpg', 'Senior Pathologists & Consultants', 'Experienced clinical pathologists overseeing tissue biopsy & blood picture reviews.')">
+          <div class="team-card-inner">
+            <div class="team-img-wrap">
+              <img src="images/team/team-2.jpg" alt="Senior Pathologists & Consultants" loading="lazy">
+              <div class="expand-btn"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-sky-600 bg-sky-50 px-2.5 py-1 rounded-full inline-block mb-2">
+                  Specialists
+                </span>
+                <h3 class="text-base font-bold text-gray-900 leading-snug">Senior Pathologists & Consultants</h3>
+                <p class="text-xs text-gray-500 mt-2 line-clamp-2">Detailed microscope and clinical reporting by senior consultants.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
+                <span><i class="fas fa-microscope text-sky-500 mr-1"></i> Quality Verified</span>
+                <span class="text-orange-500 font-semibold">View <i class="fas fa-arrow-right text-[10px] ml-0.5"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="team-card-3d cursor-pointer" onclick="openLightbox('images/team/team-3.jpg', 'Dr. Dilip Sen - Founder (1965)', 'Pioneer of laboratory medicine in Bihar who founded the lab in an 8x8 room in 1965.')">
+          <div class="team-card-inner">
+            <div class="team-img-wrap">
+              <img src="images/team/team-3.jpg" alt="Dr. Dilip Sen Founder" loading="lazy">
+              <div class="expand-btn"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full inline-block mb-2">
+                  Heritage (1965)
+                </span>
+                <h3 class="text-base font-bold text-gray-900 leading-snug">Dr. Dilip Sen - Founder</h3>
+                <p class="text-xs text-gray-500 mt-2 line-clamp-2">Started in 1965 in an 8x8 room; founded Bihar's 1st private licensed blood bank in 1969.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
+                <span><i class="fas fa-landmark text-amber-500 mr-1"></i> 60 Years Trust</span>
+                <span class="text-orange-500 font-semibold">View <i class="fas fa-arrow-right text-[10px] ml-0.5"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="team-card-3d cursor-pointer" onclick="openLightbox('images/team/team-4.jpg', 'Central Diagnostic Automation', 'Fully automated high-throughput clinical biochemistry analyzers with barcode tracing.')">
+          <div class="team-card-inner">
+            <div class="team-img-wrap">
+              <img src="images/team/team-4.jpg" alt="Central Diagnostic Automation" loading="lazy">
+              <div class="expand-btn"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full inline-block mb-2">
+                  Technology
+                </span>
+                <h3 class="text-base font-bold text-gray-900 leading-snug">Central Diagnostic Automation</h3>
+                <p class="text-xs text-gray-500 mt-2 line-clamp-2">High-speed automated analyzers eliminating human error in test execution.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
+                <span><i class="fas fa-robot text-emerald-500 mr-1"></i> Roche & Sysmex</span>
+                <span class="text-orange-500 font-semibold">View <i class="fas fa-arrow-right text-[10px] ml-0.5"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="team-card-3d cursor-pointer" onclick="openLightbox('images/team/team-5.jpg', 'Hematology & Quality Systems', 'Specialized hematology department participating in AIIMS-ISHTM External Quality Assurance.')">
+          <div class="team-card-inner">
+            <div class="team-img-wrap">
+              <img src="images/team/team-5.jpg" alt="Hematology & Quality Systems" loading="lazy">
+              <div class="expand-btn"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full inline-block mb-2">
+                  Quality Assurance
+                </span>
+                <h3 class="text-base font-bold text-gray-900 leading-snug">Hematology & Quality Systems</h3>
+                <p class="text-xs text-gray-500 mt-2 line-clamp-2">AIIMS New Delhi registered EQAP hematology controls for precision blood tests.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
+                <span><i class="fas fa-check-double text-indigo-500 mr-1"></i> AIIMS EQAP</span>
+                <span class="text-orange-500 font-semibold">View <i class="fas fa-arrow-right text-[10px] ml-0.5"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="team-card-3d cursor-pointer" onclick="openLightbox('images/team/team-6.jpg', 'Clinical Laboratory Technicians', 'Certified laboratory technologists ensuring sterile handling and cold-chain sample safety.')">
+          <div class="team-card-inner">
+            <div class="team-img-wrap">
+              <img src="images/team/team-6.jpg" alt="Clinical Laboratory Technicians" loading="lazy">
+              <div class="expand-btn"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2.5 py-1 rounded-full inline-block mb-2">
+                  Lab Staff
+                </span>
+                <h3 class="text-base font-bold text-gray-900 leading-snug">Clinical Lab Technicians</h3>
+                <p class="text-xs text-gray-500 mt-2 line-clamp-2">Highly skilled technologists dedicated to meticulous calibration and specimen care.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
+                <span><i class="fas fa-user-nurse text-purple-500 mr-1"></i> Certified Staff</span>
+                <span class="text-orange-500 font-semibold">View <i class="fas fa-arrow-right text-[10px] ml-0.5"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 7 -->
+        <div class="team-card-3d cursor-pointer" onclick="openLightbox('images/team/team-7.jpg', 'Generations of Trust', 'Celebration of sixty continuous years of medical service to families across Bihar.')">
+          <div class="team-card-inner">
+            <div class="team-img-wrap">
+              <img src="images/team/team-7.jpg" alt="Generations of Trust" loading="lazy">
+              <div class="expand-btn"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-rose-600 bg-rose-50 px-2.5 py-1 rounded-full inline-block mb-2">
+                  Milestone
+                </span>
+                <h3 class="text-base font-bold text-gray-900 leading-snug">Three Generations of Trust</h3>
+                <p class="text-xs text-gray-500 mt-2 line-clamp-2">From Dr. Dilip Sen to present day: unbroken commitment to Bihar's healthcare.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
+                <span><i class="fas fa-heart text-rose-500 mr-1"></i> Patient Focused</span>
+                <span class="text-orange-500 font-semibold">View <i class="fas fa-arrow-right text-[10px] ml-0.5"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 8 -->
+        <div class="team-card-3d cursor-pointer" onclick="openLightbox('images/team/team-8.jpg', 'Budh Marg Central Diagnostic Center', 'The primary diagnostic hub at Budh Marg, Patna housing comprehensive pathology divisions.')">
+          <div class="team-card-inner">
+            <div class="team-img-wrap">
+              <img src="images/team/team-8.jpg" alt="Central Diagnostic Center" loading="lazy">
+              <div class="expand-btn"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-1 rounded-full inline-block mb-2">
+                  Facility
+                </span>
+                <h3 class="text-base font-bold text-gray-900 leading-snug">Central Laboratory Wing</h3>
+                <p class="text-xs text-gray-500 mt-2 line-clamp-2">Budh Marg facility equipped with molecular, biochemistry, and microbiology labs.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
+                <span><i class="fas fa-building text-teal-500 mr-1"></i> Budh Marg, Patna</span>
+                <span class="text-orange-500 font-semibold">View <i class="fas fa-arrow-right text-[10px] ml-0.5"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: MILESTONE TIMELINE -->
+  <section class="py-16 md:py-24 bg-white border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-orange-600 text-xs font-bold tracking-widest uppercase mb-2 block">Chronicle of Trust</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight font-serif">Key Historical Milestones</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Milestone 1 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-gray-200 text-center hover:border-orange-300 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 font-black text-lg flex items-center justify-center mx-auto mb-4">
+            1965
+          </div>
+          <h4 class="font-bold text-gray-900 mb-2">Founded by Dr. Dilip Sen</h4>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Commenced in an 8x8 room with manual microscopic techniques and medical oversight.
+          </p>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-gray-200 text-center hover:border-orange-300 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 font-black text-lg flex items-center justify-center mx-auto mb-4">
+            1969
+          </div>
+          <h4 class="font-bold text-gray-900 mb-2">Bihar's 1st Blood Bank</h4>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Pioneered the region's first privately licensed blood bank to provide safe transfusions.
+          </p>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-gray-200 text-center hover:border-orange-300 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 font-black text-lg flex items-center justify-center mx-auto mb-4">
+            1990
+          </div>
+          <h4 class="font-bold text-gray-900 mb-2">Incorporation & Automation</h4>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Incorporated as Sen Diagnostics Pvt Ltd, introducing computerized analyzers to Bihar.
+          </p>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-gray-200 text-center hover:border-orange-300 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 font-black text-lg flex items-center justify-center mx-auto mb-4">
+            2026
+          </div>
+          <h4 class="font-bold text-gray-900 mb-2">NABL & 3rd Generation</h4>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            NABL Accredited (MC-6584) central facility with automated phlebotomy and digital delivery.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL FOR HD PHOTO PREVIEW -->
+  <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md opacity-0 pointer-events-none flex items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/20 text-white hover:bg-orange-500 flex items-center justify-center text-xl transition-colors">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="max-w-4xl w-full text-center">
+      <img id="modalImg" src="" alt="Team Photo Preview" class="max-h-[75vh] w-auto mx-auto rounded-2xl shadow-2xl object-contain border border-white/20">
+      <h3 id="modalTitle" class="text-xl sm:text-2xl font-bold text-white mt-4 font-serif"></h3>
+      <p id="modalDesc" class="text-sm text-slate-300 mt-1 max-w-xl mx-auto"></p>
+    </div>
+  </div>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="hospital-footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="lg:col-span-2">
+          <div class="mb-4">
+            <img src="images/sen-logo.jpg" alt="Sen Diagnostics - Since 1965" class="footer-logo-img mb-3">
+          </div>
+          <p class="text-xs text-gray-400 mb-3 font-mono">MCA CIN: U00092BR1990PTC004168</p>
+          <p class="text-sm text-gray-400 leading-relaxed mb-4 max-w-lg">
+            Sen Diagnostics Private Limited, Patna is registered with the <strong>ISHTM-AIIMS External Quality Assurance Programme</strong> organized by the Department of Hematology, AIIMS, New Delhi.
+          </p>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-lg">
+            This assures comparable diagnostic accuracy and blood picture results to reference tertiary laboratories across India using matching methodologies and automated instrumentation.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-base font-bold text-white mb-4 relative pb-2 border-b border-gray-800">Quick Pages</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="footer-link-item"><i class="fas fa-chevron-right text-xs text-gray-600"></i> Home</a></li>
+            <li><a href="about.html" class="footer-link-item"><i class="fas fa-chevron-right text-xs text-gray-600"></i> About Our Legacy (1965)</a></li>
+            <li><a href="our-team.html" class="footer-link-item text-orange-400"><i class="fas fa-chevron-right text-xs text-orange-400"></i> Our Team & Journey</a></li>
+            <li><a href="packages.html" class="footer-link-item"><i class="fas fa-chevron-right text-xs text-gray-600"></i> Health Packages</a></li>
+            <li><a href="test-list.html" class="footer-link-item"><i class="fas fa-chevron-right text-xs text-gray-600"></i> Pathology Test List</a></li>
+            <li><a href="center-facility.html" class="footer-link-item"><i class="fas fa-chevron-right text-xs text-gray-600"></i> Center Facility</a></li>
+            <li><a href="contact-us.html" class="footer-link-item"><i class="fas fa-chevron-right text-xs text-gray-600"></i> Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-base font-bold text-white mb-4 relative pb-2 border-b border-gray-800">Central Laboratory</h4>
+          <div class="space-y-3 text-xs text-gray-400">
+            <p><i class="fas fa-map-marker-alt text-orange-500 mr-2"></i> Dr. Dilip Sen Pathological Laboratory, Budh Marg, Patna, Bihar 800001</p>
+            <p><i class="fas fa-phone-alt text-orange-500 mr-2"></i> +91 74819 55502 / 0612-2223847</p>
+            <p><i class="fas fa-envelope text-orange-500 mr-2"></i> info@sendiagnostics.com</p>
+            <p><i class="fas fa-clock text-orange-500 mr-2"></i> 7:00 AM – 9:00 PM (Daily)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800/80 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-400 gap-4">
+        <p>&copy; 1965–2026 Sen Diagnostics Private Limited. All Rights Reserved. Project curated by Aman.</p>
+        <p class="text-[11px] text-gray-400">NABL Accredited Medical Testing Laboratory • MC-6584</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM STICKY QUICK-ACTION BAR -->
+  <aside class="mobile-sticky-action-bar" aria-label="Mobile Quick Actions">
+    <a href="tel:+917481955502" class="mobile-action-tab" aria-label="Call Hospital">
+      <div class="mobile-tab-icon-wrap">
+        <i class="fas fa-phone-alt text-sky-600"></i>
+      </div>
+      <span class="mobile-tab-label">Call</span>
+    </a>
+    <button type="button" onclick="openBookingModal('Home Collection Request', 0)" class="mobile-action-btn-primary" aria-label="Book Home Visit">
+      <span class="pulse-ring"></span>
+      <i class="fas fa-home"></i>
+      <span>Book Visit</span>
+    </button>
+    <a href="packages.html" class="mobile-action-tab" aria-label="View Health Packages">
+      <div class="mobile-tab-icon-wrap">
+        <i class="fas fa-box-medical text-orange-500"></i>
+      </div>
+      <span class="mobile-tab-label">Packages</span>
+    </a>
+    <a href="https://wa.me/917481955502?text=Hello%20Sen%20Diagnostics%2C%20I%20would%20like%20to%20book%20a%20test." target="_blank" class="mobile-action-tab" aria-label="WhatsApp Us">
+      <div class="mobile-tab-icon-wrap">
+        <i class="fab fa-whatsapp text-emerald-500"></i>
+      </div>
+      <span class="mobile-tab-label">WhatsApp</span>
+    </a>
+  </aside>
+
+  <!-- FLOATING WHATSAPP CTA -->
+  <a href="https://wa.me/917481955502?text=Hello%20Sen%20Diagnostics%2C%20I%20would%20like%20information%20about%20a%20laboratory%20test." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-float flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl transition-all hover:scale-110 active:scale-95 z-50" 
+     aria-label="Chat with Sen Diagnostics on WhatsApp">
+    <i class="fab fa-whatsapp text-3xl"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script>
+    function openLightbox(src, title, desc) {
+      const modal = document.getElementById('imageModal');
+      document.getElementById('modalImg').src = src;
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDesc').textContent = desc;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
