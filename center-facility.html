@@ -2,15 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <link rel="icon" type="image/jpeg" href="images/sen-logo.jpg">
+  <link rel="icon" type="image/jpeg" href="images/sen-logo.jpg">
   <link rel="apple-touch-icon" href="images/sen-logo.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <meta name="theme-color" content="#0C2340">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Sen Diagnostics">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="mobile-web-app-capable" content="yes">
   <title>Central Laboratory & Diagnostic Facility | Sen Diagnostics Patna</title>
   <meta name="description" content="Explore Sen Diagnostics Central Laboratory at Budh Marg, Patna. 8 accredited pathology disciplines, automated robotics, LIMS barcoding, and AIIMS EQAP quality assurance.">
   <meta name="keywords" content="sen diagnostics facility, pathology laboratory patna, automated lab patna, biochemistry lab patna, hematology aiims eqap, histopathology patna, budh marg lab">
@@ -51,46 +45,482 @@
 </head>
 <body class="bg-gray-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
 
-  <!-- TOP CLINICAL BAR -->
-  <div class="top-clinical-bar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="top-bar-flex">
-        <div class="flex items-center gap-4">
-          <span class="text-xs text-slate-300 hidden sm:inline-flex items-center gap-1.5">
-            <i class="fas fa-certificate text-emerald-400"></i> NABL Accredited (MC-6584) | ISO 9001:2015
-          </span>
-          <button type="button" class="open-holiday-modal text-xs font-semibold text-orange-400 bg-orange-950/60 border border-orange-500/30 px-3 py-1 rounded-full hover:bg-orange-600 hover:text-white transition-all">
-            <i class="far fa-calendar-alt mr-1"></i> List of Holidays 2026
-          </button>
-        </div>
-        <div class="flex items-center gap-6 text-xs sm:text-sm">
-          <a href="tel:+917481953528" class="top-bar-item font-medium"><i class="fas fa-phone-alt"></i> +91 74819 53528</a>
-          <a href="https://wa.me/917481955502" target="_blank" class="top-bar-item font-medium"><i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp: +91 74819 55502</a>
-        </div>
+  <!-- 1. Clinical Top Announcement Bar -->
+  <div class="clinical-topbar text-xs py-2 px-4 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-4 flex-wrap">
+        <span class="flex items-center gap-1.5 text-gray-300">
+          <i class="fas fa-certificate text-emerald-400"></i>
+          <strong class="text-white">NABL Accredited</strong> (MC-6584) | ISO 9001:2015
+        </span>
+        <span class="hidden md:inline-block text-gray-500">|</span>
+        <span class="hidden md:flex items-center gap-1.5 text-gray-300">
+          <i class="fas fa-microscope text-sky-400"></i>
+          ISHTM-AIIMS EQAP Registered Hematology
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-gray-300">
+        <a href="tel:+917481953528" class="hover:text-white transition flex items-center gap-1">
+          <i class="fas fa-phone-alt text-orange-400"></i> +91 74819 53528
+        </a>
+        <span class="text-gray-600">•</span>
+        <button class="open-holiday-modal hover:text-white transition flex items-center gap-1 text-sky-400">
+          <i class="far fa-calendar-alt"></i> 2026 Holiday Schedule
+        </button>
       </div>
     </div>
   </div>
 
-  <!-- NAVBAR -->
-  <header class="hospital-nav">
-    <div class="nav-container-flex">
+  <!-- 2. Sticky Glass Header Navigation -->
+  <header class="navbar-sticky-glass sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
       <a href="index.html" class="hospital-brand" aria-label="Sen Diagnostics - Established 1965">
         <img src="images/sen-logo.jpg" alt="Sen Diagnostics - The Pioneer of Laboratory Medicine in Bihar - Since 1965" class="hospital-brand-logo">
       </a>
-      <nav>
-        <ul class="nav-links-menu">
-          <li><a href="index.html" class="nav-link-btn">Home</a></li>
-          <li><a href="about.html" class="nav-link-btn">About Us</a></li>
-          <li><a href="our-team.html" class="nav-link-btn">Our Team</a></li>
-          <li><a href="packages.html" class="nav-link-btn">Health Packages</a></li>
-          <li><a href="test-list.html" class="nav-link-btn">Test Directory</a></li>
-          <li><a href="center-facility.html" class="nav-link-btn active">Center Facility</a></li>
-          <li><a href="contact-us.html" class="nav-link-btn">Contact Us</a></li>
-        </ul>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="text-gray-600 hover:text-sky-600 transition">Home</a>
+        <a href="about.html" class="text-gray-600 hover:text-sky-600 transition">About Us</a>
+        <a href="our-team.html" class="text-gray-600 hover:text-sky-600 transition">Our Team</a>
+        <a href="packages.html" class="text-gray-600 hover:text-sky-600 transition">Health Packages</a>
+        <a href="test-list.html" class="text-gray-600 hover:text-sky-600 transition">Test Directory</a>
+        <a href="center-facility.html" class="text-sky-600 font-bold border-b-2 border-sky-600 pb-1">Center Facility</a>
+        <a href="contact-us.html" class="text-gray-600 hover:text-sky-600 transition">Contact Us</a>
       </nav>
-      <div class="mb-3">
-            <img src="images/sen-logo.jpg" alt="Sen Diagnostics - Since 1965" class="footer-logo-img">
+
+      <!-- CTA Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <button onclick="openBookingModal('Facility Visit Booking', 0)" class="btn-hospital-primary text-sm shadow-lg shadow-sky-600/20">
+          <i class="fas fa-calendar-check mr-2"></i> Book Lab Appointment
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-gray-900 p-2">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="index.html" class="block py-2 text-base font-medium text-gray-700 hover:text-sky-600">Home</a>
+      <a href="about.html" class="block py-2 text-base font-medium text-gray-700 hover:text-sky-600">About Us</a>
+      <a href="our-team.html" class="block py-2 text-base font-medium text-gray-700 hover:text-sky-600">Our Team & Journey</a>
+      <a href="packages.html" class="block py-2 text-base font-medium text-gray-700 hover:text-sky-600">Health Packages</a>
+      <a href="test-list.html" class="block py-2 text-base font-medium text-gray-700 hover:text-sky-600">Test Directory</a>
+      <a href="center-facility.html" class="block py-2 text-base font-bold text-sky-600">Center Facility</a>
+      <a href="contact-us.html" class="block py-2 text-base font-medium text-gray-700 hover:text-sky-600">Contact Us</a>
+      <div class="pt-2">
+        <button onclick="openBookingModal('Facility Visit Booking', 0)" class="w-full btn-hospital-primary justify-center text-sm">
+          <i class="fas fa-calendar-check mr-2"></i> Book Lab Appointment
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Inner Page Hero Banner -->
+  <section class="inner-page-hero text-center">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="breadcrumbs">
+        <a href="index.html"><i class="fas fa-home mr-1"></i> Home</a>
+        <i class="fas fa-chevron-right text-xs text-gray-500"></i>
+        <span class="text-white font-medium">Center Facility & Core Disciplines</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
+        Central Laboratory & Diagnostic Facility
+      </h1>
+      <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        Eastern India's gold standard laboratory infrastructure at Budh Marg, Patna. Powered by automated robotic analyzers, barcoded LIMS tracking, and 8 specialized clinical disciplines.
+      </p>
+      <div class="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-gray-300">
+        <span class="bg-gray-800/80 px-3 py-1.5 rounded-full border border-gray-700 flex items-center gap-1.5">
+          <i class="fas fa-vial text-sky-400"></i> 100% Closed Vacuum BD Vacutainer®
+        </span>
+        <span class="bg-gray-800/80 px-3 py-1.5 rounded-full border border-gray-700 flex items-center gap-1.5">
+          <i class="fas fa-barcode text-orange-400"></i> Bedside LIMS Barcode Tracking
+        </span>
+        <span class="bg-gray-800/80 px-3 py-1.5 rounded-full border border-gray-700 flex items-center gap-1.5">
+          <i class="fas fa-award text-emerald-400"></i> NABL Certified Reference Standard
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. The 8 Core Diagnostic Disciplines (3D Interactive Grid) -->
+  <main class="flex-grow">
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-block px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
+          Specialized Divisions
+        </span>
+        <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">
+          8 Integrated Clinical Disciplines Under One Roof
+        </h2>
+        <p class="text-gray-600 text-sm mt-2">
+          From routine screening to advanced molecular sequencing, our Budh Marg central facility houses specialized pathology domains led by experienced medical pathologists and senior technologists.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Discipline 1: Biochemistry -->
+        <div class="hospital-white-card p-6 flex flex-col justify-between" data-3d-tilt>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-2xl mb-4 border border-sky-100 shadow-sm">
+              <i class="fas fa-flask"></i>
+            </div>
+            <span class="text-[11px] font-bold text-sky-600 uppercase tracking-wider block mb-1">Division 01</span>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Biochemistry</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              High-throughput automated clinical chemistry analyzers handling metabolic panels, liver & kidney assays, electrolyte ion-selective electrode (ISE) profiling, and enzymatic kinetic tests.
+            </p>
           </div>
+          <div class="pt-3 border-t border-gray-100 text-xs text-gray-500 flex items-center justify-between">
+            <span class="font-medium text-gray-800"><i class="fas fa-microchip text-sky-600 mr-1"></i> Auto-Analyzers</span>
+            <span class="text-emerald-600 font-bold">Same Day</span>
+          </div>
+        </div>
+
+        <!-- Discipline 2: Hematology -->
+        <div class="hospital-white-card p-6 flex flex-col justify-between" data-3d-tilt>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl mb-4 border border-rose-100 shadow-sm">
+              <i class="fas fa-tint"></i>
+            </div>
+            <span class="text-[11px] font-bold text-rose-600 uppercase tracking-wider block mb-1">Division 02 &bull; AIIMS EQAP</span>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Hematology</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Automated 5-part differential cell counters, peripheral blood smear cytology by senior pathologists, HPLC hemoglobin variant analysis (Beta Thalassemia screening), and PT/INR coagulation assays.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-gray-100 text-xs text-gray-500 flex items-center justify-between">
+            <span class="font-medium text-gray-800"><i class="fas fa-certificate text-rose-600 mr-1"></i> AIIMS EQAP</span>
+            <span class="text-emerald-600 font-bold">Same Day</span>
+          </div>
+        </div>
+
+        <!-- Discipline 3: Immunology & Serology -->
+        <div class="hospital-white-card p-6 flex flex-col justify-between" data-3d-tilt>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mb-4 border border-amber-100 shadow-sm">
+              <i class="fas fa-shield-virus"></i>
+            </div>
+            <span class="text-[11px] font-bold text-amber-600 uppercase tracking-wider block mb-1">Division 03</span>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Immunology & Serology</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Chemiluminescence Immunoassays (CLIA) and ELISA platforms for automated thyroid panels, Vitamin D3, Vitamin B12, fertility hormones, cardiac troponin, and viral markers (HIV, HBV, HCV).
+            </p>
+          </div>
+          <div class="pt-3 border-t border-gray-100 text-xs text-gray-500 flex items-center justify-between">
+            <span class="font-medium text-gray-800"><i class="fas fa-radiation text-amber-600 mr-1"></i> CLIA Platforms</span>
+            <span class="text-emerald-600 font-bold">Same Day</span>
+          </div>
+        </div>
+
+        <!-- Discipline 4: Microbiology -->
+        <div class="hospital-white-card p-6 flex flex-col justify-between" data-3d-tilt>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-4 border border-emerald-100 shadow-sm">
+              <i class="fas fa-bacterium"></i>
+            </div>
+            <span class="text-[11px] font-bold text-emerald-600 uppercase tracking-wider block mb-1">Division 04</span>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Microbiology</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Automated blood culture monitoring, precise minimum inhibitory concentration (MIC) antibiotic sensitivity panels, fungal investigations, AFB tuberculosis staining, and gram smear evaluations.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-gray-100 text-xs text-gray-500 flex items-center justify-between">
+            <span class="font-medium text-gray-800"><i class="fas fa-vial text-emerald-600 mr-1"></i> Automated MIC</span>
+            <span class="text-sky-600 font-bold">48-72 Hours</span>
+          </div>
+        </div>
+
+        <!-- Discipline 5: Clinical Pathology -->
+        <div class="hospital-white-card p-6 flex flex-col justify-between" data-3d-tilt>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl mb-4 border border-indigo-100 shadow-sm">
+              <i class="fas fa-microscope"></i>
+            </div>
+            <span class="text-[11px] font-bold text-indigo-600 uppercase tracking-wider block mb-1">Division 05</span>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Clinical Pathology</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Digital urine sediment analysis, automated routine urinalysis with protein-creatinine ratio (ACR), WHO-standard semen analysis, stool occult blood, and body fluid microscopic examinations.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-gray-100 text-xs text-gray-500 flex items-center justify-between">
+            <span class="font-medium text-gray-800"><i class="fas fa-eye text-indigo-600 mr-1"></i> Microscopic Flow</span>
+            <span class="text-emerald-600 font-bold">Same Day</span>
+          </div>
+        </div>
+
+        <!-- Discipline 6: Histopathology -->
+        <div class="hospital-white-card p-6 flex flex-col justify-between" data-3d-tilt>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl mb-4 border border-purple-100 shadow-sm">
+              <i class="fas fa-disease"></i>
+            </div>
+            <span class="text-[11px] font-bold text-purple-600 uppercase tracking-wider block mb-1">Division 06</span>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Histopathology</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Comprehensive surgical tissue biopsy processing, grossing, automatic vacuum tissue processor, microtomy, routine Hematoxylin & Eosin (H&E) staining, and specialized oncopathology reporting.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-gray-100 text-xs text-gray-500 flex items-center justify-between">
+            <span class="font-medium text-gray-800"><i class="fas fa-layer-group text-purple-600 mr-1"></i> Biopsy Sectioning</span>
+            <span class="text-sky-600 font-bold">3-5 Days</span>
+          </div>
+        </div>
+
+        <!-- Discipline 7: Cytopathology -->
+        <div class="hospital-white-card p-6 flex flex-col justify-between" data-3d-tilt>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center text-2xl mb-4 border border-cyan-100 shadow-sm">
+              <i class="fas fa-dna"></i>
+            </div>
+            <span class="text-[11px] font-bold text-cyan-600 uppercase tracking-wider block mb-1">Division 07</span>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Cytopathology</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Fine Needle Aspiration Cytology (FNAC) by experienced pathologists, liquid-based cervical Pap smear cytology, and exfoliative fluid cytology for early pre-cancerous and malignancy detection.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-gray-100 text-xs text-gray-500 flex items-center justify-between">
+            <span class="font-medium text-gray-800"><i class="fas fa-syringe text-cyan-600 mr-1"></i> FNAC & Pap Smear</span>
+            <span class="text-emerald-600 font-bold">24-48 Hours</span>
+          </div>
+        </div>
+
+        <!-- Discipline 8: Molecular Diagnostics -->
+        <div class="hospital-white-card p-6 flex flex-col justify-between" data-3d-tilt>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-2xl mb-4 border border-orange-100 shadow-sm">
+              <i class="fas fa-viruses"></i>
+            </div>
+            <span class="text-[11px] font-bold text-orange-600 uppercase tracking-wider block mb-1">Division 08 &bull; ICMR Certified</span>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Molecular Diagnostics</h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              High-precision Real-Time PCR (RT-PCR) clean-room suites, automated DNA/RNA extraction robotics, viral load quantitation, and genetic mutation screenings with strict contamination barriers.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-gray-100 text-xs text-gray-500 flex items-center justify-between">
+            <span class="font-medium text-gray-800"><i class="fas fa-biohazard text-orange-600 mr-1"></i> RT-PCR Clean Room</span>
+            <span class="text-emerald-600 font-bold">Same Day / 24h</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. Central Lab Infrastructure & Technology Highlights -->
+    <section class="bg-white py-16 border-t border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="inline-block px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
+            Facility Excellence
+          </span>
+          <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">
+            Advanced Diagnostic Architecture & Safety Systems
+          </h2>
+          <p class="text-gray-600 text-sm mt-2">
+            Every sample passing through Sen Diagnostics is safeguarded by institutional protocols developed over six decades of medical leadership.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Pillar 1 -->
+          <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 shadow-sm">
+            <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-barcode"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">100% Barcoding & LIMS</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Pioneered in 2001 as the first laboratory in India to barcode every tube at patient collection. Our proprietary LIMS interfaces directly with automated analyzers, eliminating human transcription error.
+            </p>
+            <div class="mt-4 pt-3 border-t border-gray-200 text-[11px] font-semibold text-sky-700 flex items-center gap-1.5">
+              <i class="fas fa-shield-alt"></i> Zero-Mixup Specimen Security
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 shadow-sm">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-snowflake"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Unbroken Cold Chain Transport</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              All specimens collected from home visits or peripheral clinics are transported in calibrated thermo-insulated cool boxes with frozen gel packs. Monitored strictly at 2°C to 8°C until loading onto instruments.
+            </p>
+            <div class="mt-4 pt-3 border-t border-gray-200 text-[11px] font-semibold text-emerald-700 flex items-center gap-1.5">
+              <i class="fas fa-thermometer-half"></i> Calibrated Temperature Logs
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 shadow-sm">
+            <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-tasks-alt"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Dual-Tier Quality Control (QC)</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Every analytical run begins with multi-level internal controls (Westgard rules). Concurrently benchmarked against external proficiency schemes including <strong>AIIMS New Delhi</strong> and <strong>CMC Vellore</strong>.
+            </p>
+            <div class="mt-4 pt-3 border-t border-gray-200 text-[11px] font-semibold text-orange-700 flex items-center gap-1.5">
+              <i class="fas fa-award"></i> NABL MC-6584 Verified Calibration
+            </div>
+          </div>
+        </div>
+
+        <!-- Infrastructure Metrics Counter -->
+        <div class="mt-12 bg-gray-900 text-white rounded-3xl p-8 lg:p-10 shadow-xl border border-gray-800">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-gray-800">
+            <div class="p-2">
+              <div class="text-3xl lg:text-4xl font-extrabold text-sky-400 mb-1">10,000+ sq ft</div>
+              <div class="text-xs text-gray-400 font-medium">Central Laboratory Space</div>
+            </div>
+            <div class="p-2">
+              <div class="text-3xl lg:text-4xl font-extrabold text-orange-400 mb-1">60+ Years</div>
+              <div class="text-xs text-gray-400 font-medium">Continuous Quality Operation</div>
+            </div>
+            <div class="p-2">
+              <div class="text-3xl lg:text-4xl font-extrabold text-emerald-400 mb-1">300+ Tests</div>
+              <div class="text-xs text-gray-400 font-medium">Diagnostic Investigation Menu</div>
+            </div>
+            <div class="p-2">
+              <div class="text-3xl lg:text-4xl font-extrabold text-purple-400 mb-1">15+ Phlebotomists</div>
+              <div class="text-xs text-gray-400 font-medium">Patna Doorstep Service Fleet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Patient Experience & Facilities at Budh Marg -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+            Patient-First Care
+          </span>
+          <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight mb-4">
+            Designed for Dignity, Hygiene & Comfort
+          </h2>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            Located conveniently on Budh Marg opposite ISKCON Temple and Ashok Cinema, Sen Diagnostics offers an air-conditioned, spotless clinical environment engineered to minimize waiting times and maximize clinical accuracy.
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mt-0.5 shrink-0">
+                <i class="fas fa-chair"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-gray-900">Spacious Phlebotomy Lounges</h4>
+                <p class="text-xs text-gray-500">Individual sterile collection cubicles ensuring complete patient privacy and comfort during venipuncture.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center text-sm mt-0.5 shrink-0">
+                <i class="fas fa-wheelchair"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-gray-900">Senior Citizen & Wheelchair Accessible</h4>
+                <p class="text-xs text-gray-500">Ramps, dedicated ground-floor sampling counters, and prioritized service for elderly and differently-abled patients.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm mt-0.5 shrink-0">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-gray-900">Extended 7:00 AM – 9:00 PM Timings</h4>
+                <p class="text-xs text-gray-500">Early morning fasting collections from 7:00 AM and evening consultations until 9:00 PM (Monday through Saturday).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 flex items-center gap-4">
+            <a href="contact-us.html" class="btn-hospital-primary text-sm font-bold">
+              <i class="fas fa-map-marked-alt mr-2"></i> Get Directions & Hours
+            </a>
+            <button onclick="openBookingModal('Budh Marg Lab Visit', 0)" class="btn-hospital-outline text-sm font-semibold">
+              <i class="fas fa-calendar-check mr-2"></i> Schedule Appointment
+            </button>
+          </div>
+        </div>
+
+        <!-- Center Address & Quick Specs Card -->
+        <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-3xl p-8 border border-gray-700 shadow-2xl relative overflow-hidden" data-3d-tilt>
+          <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-sky-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          
+          <div class="flex items-center gap-2 text-xs font-bold text-sky-400 uppercase tracking-wider mb-2">
+            <i class="fas fa-hospital"></i> Central Processing Facility
+          </div>
+          <h3 class="text-2xl font-extrabold text-white mb-2">Budh Marg Diagnostic Center</h3>
+          <p class="text-gray-300 text-xs mb-6">Budh Marg, Patna, Bihar &ndash; 800 001 (Opp. ISKCON Temple / Ashok Cinema)</p>
+
+          <div class="space-y-3 border-t border-gray-700 pt-5 text-xs text-gray-300">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-400">Working Days:</span>
+              <span class="font-bold text-white">Monday &ndash; Sunday (Open 7 Days)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-400">Mon &ndash; Sat Timings:</span>
+              <span class="font-bold text-white">7:00 AM &ndash; 9:00 PM</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-400">Sunday Timings:</span>
+              <span class="font-bold text-amber-400">7:00 AM &ndash; 6:00 PM</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-400">Direct Front Desk:</span>
+              <a href="tel:+917481953528" class="font-bold text-sky-400 hover:underline">+91 74819 53528</a>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-400">WhatsApp Dispatch:</span>
+              <a href="https://wa.me/917481955502" target="_blank" class="font-bold text-emerald-400 hover:underline">+91 74819 55502</a>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-700/80 flex items-center justify-between text-xs">
+            <span class="text-gray-400">NABL Accreditation No:</span>
+            <span class="px-2 py-1 bg-emerald-900/60 text-emerald-300 border border-emerald-700 rounded font-mono font-bold">MC-6584</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Patna Home Collection CTA Banner -->
+    <section class="bg-gray-100 py-12 border-t border-gray-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-2">Need a blood test without traveling?</h3>
+        <p class="text-gray-600 text-sm max-w-xl mx-auto mb-6">
+          Our certified phlebotomists follow strict aseptic vacuum collection at your home across all areas of Patna. Same-day digital reporting via WhatsApp.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <button onclick="openBookingModal('Home Collection', 0)" class="btn-hospital-primary px-8 py-3 text-sm font-bold shadow-md shadow-sky-600/30">
+            <i class="fas fa-home mr-2"></i> Book Doorstep Collection
+          </button>
+          <a href="packages.html" class="btn-hospital-outline px-6 py-3 text-sm font-semibold">
+            <i class="fas fa-heartbeat mr-2"></i> View Health Packages
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. Global Footer (Clean Hospital Light Black / Deep Charcoal) -->
+  <footer class="footer-charcoal bg-[#111827] text-gray-300 pt-16 pb-8 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Col 1: Brand & NABL -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="mb-3">
+          <img src="images/sen-logo.jpg" alt="Sen Diagnostics - Since 1965" class="footer-logo-img">
+        </div>
           <p class="text-xs text-gray-400 leading-relaxed">
             Sen Diagnostics Private Limited (CIN: U00092BR1990PTC004168). Founded 1965 by Dr. Dilip Sen. Eastern India's pioneer in clinical pathology, hematology automation, and molecular diagnostics.
           </p>
@@ -237,7 +667,7 @@
 
           <div>
             <label class="block text-xs font-semibold text-gray-700 mb-1">Service Type</label>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+            <div class="grid grid-cols-2 gap-3">
               <label class="flex items-center gap-2 p-2.5 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 text-xs">
                 <input type="radio" name="collection-type" value="center" checked class="text-sky-600">
                 <span class="font-medium text-gray-800">Budh Marg Lab Visit</span>
@@ -316,35 +746,32 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- ==========================================================================
-       MOBILE BOTTOM STICKY QUICK-ACTION BAR (CLINICAL RAPID ACTIONS)
-       ========================================================================== -->
+  <!-- 12. Toast Notification Container -->
+  <div id="hospital-toast-container" class="fixed bottom-6 left-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+  <!-- MOBILE BOTTOM STICKY QUICK-ACTION BAR -->
   <aside class="mobile-sticky-action-bar" aria-label="Mobile Quick Actions">
     <div class="mobile-action-bar-inner">
-      <!-- 1. Direct Call -->
       <a href="tel:+917481953528" class="mobile-action-tab" title="Call Sen Diagnostics">
         <div class="mobile-tab-icon-wrap text-sky-600">
           <i class="fas fa-phone-alt"></i>
         </div>
         <span class="mobile-tab-label">Call Lab</span>
       </a>
-
-      <!-- 2. WhatsApp Chat -->
-      <a href="https://wa.me/917481955502?text=Hello%20Sen%20Diagnostics%2C%20I%20would%20like%20to%20book%20a%20test%20or%20inquire%20about%20reports." target="_blank" rel="noopener noreferrer" class="mobile-action-tab" title="WhatsApp Chat">
+      <a href="https://wa.me/917481955502?text=Hello%20Sen%20Diagnostics%2C%20I%20would%20like%20to%20book%20a%20test." target="_blank" rel="noopener noreferrer" class="mobile-action-tab" title="WhatsApp Chat">
         <div class="mobile-tab-icon-wrap text-emerald-600">
           <i class="fa-brands fa-whatsapp"></i>
         </div>
         <span class="mobile-tab-label">WhatsApp</span>
       </a>
-
-      <!-- 3. Primary CTA: Book Home Visit -->
-      <button type="button" class="mobile-action-btn-primary" onclick="openBookingModal('General Diagnostic Checkup', 500)" title="Book Home Sample Collection">
+      <button type="button" class="mobile-action-btn-primary" onclick="openBookingModal('General Investigation Inquiry', 0)" title="Book Home Visit">
         <div class="pulse-ring"></div>
         <i class="fas fa-calendar-check text-sm"></i>
         <span>Book Visit</span>
       </button>
-
-      <!-- 4. 15+ Centers Locator -->
       <a href="center-facility.html" class="mobile-action-tab" title="Find Patna Centers">
         <div class="mobile-tab-icon-wrap text-orange-600">
           <i class="fas fa-map-marker-alt"></i>
@@ -354,10 +781,5 @@
     </div>
   </aside>
 
-  <!-- 12. Toast Notification Container -->
-  <div id="hospital-toast-container" class="fixed bottom-6 left-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
-
-  <!-- Scripts -->
-  <script src="js/main.js"></script>
 </body>
 </html>

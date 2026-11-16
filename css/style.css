@@ -1566,7 +1566,130 @@ body {
   }
 }
 
-/* Breakpoint Alignment: Desktop & Laptops (>= 1024px) */
+/* ==========================================================================
+   LAPTOP & DESKTOP COMPUTER PIXEL-PERFECT ALIGNMENT ENGINE (1024px – 4K UHD)
+   Flawless UX across Laptops (1024px-1366px), Full HD (1920px) & 4K Monitors
+   ========================================================================== */
+
+/* 1. Small Laptops & Windows 125%-150% Display Scaling (1024px – 1279.98px) */
+@media (min-width: 1024px) and (max-width: 1279.98px) {
+  .hospital-nav {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  .nav-container-flex {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .hospital-brand-logo {
+    height: 40px !important;
+    max-width: 145px !important;
+  }
+
+  .nav-links-menu {
+    gap: 0.8rem !important;
+  }
+
+  .nav-link-btn {
+    font-size: 0.85rem !important;
+    padding: 0.35rem 0.15rem !important;
+    white-space: nowrap !important;
+  }
+
+  .btn-hospital-orange {
+    font-size: 0.8rem !important;
+    padding: 0.48rem 0.85rem !important;
+    white-space: nowrap !important;
+  }
+
+  /* 3-Column Package Cards on Laptops */
+  .flip-card-3d-wrap {
+    height: 590px !important;
+  }
+
+  .card-package-title {
+    font-size: 1.2rem !important;
+  }
+
+  .card-specs-strip {
+    gap: 0.3rem !important;
+    padding: 0.5rem 0.65rem !important;
+  }
+
+  .spec-strip-box span.lbl {
+    font-size: 0.62rem !important;
+  }
+
+  .spec-strip-box span.val {
+    font-size: 0.78rem !important;
+  }
+}
+
+/* 2. Standard Laptops & Desktops (1280px – 1535.98px) */
+@media (min-width: 1280px) and (max-width: 1535.98px) {
+  .nav-links-menu {
+    gap: 1.35rem !important;
+  }
+
+  .nav-link-btn {
+    font-size: 0.92rem !important;
+  }
+
+  .flip-card-3d-wrap {
+    height: 610px !important;
+  }
+}
+
+/* 3. Large Desktop Monitors & 2K / 4K UHD (>= 1536px) */
+@media (min-width: 1536px) {
+  .max-w-7xl {
+    max-width: 1360px !important;
+  }
+
+  .nav-links-menu {
+    gap: 1.6rem !important;
+  }
+
+  .nav-link-btn {
+    font-size: 0.98rem !important;
+  }
+
+  .flip-card-3d-wrap {
+    height: 620px !important;
+  }
+}
+
+/* 4. Desktop Top Clinical Bar Spacing & Flex Harmony */
+@media (min-width: 769px) {
+  .top-clinical-bar {
+    display: block !important;
+  }
+
+  .top-bar-flex {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .top-bar-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    color: #CBD5E1 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+  }
+
+  .top-bar-item:hover {
+    color: #FFFFFF !important;
+  }
+}
+
+/* 5. Desktop Body & Sticky Bar Deactivation */
 @media (min-width: 1024px) {
   body {
     padding-bottom: 0 !important;
@@ -1576,10 +1699,42 @@ body {
     display: none !important;
   }
   
-  .whatsapp-float, #whatsapp-float, a[href*="whatsapp.com"] {
+  .floating-whatsapp-widget,
+  .btn-floating-whatsapp,
+  .whatsapp-float {
+    position: fixed !important;
     bottom: 2rem !important;
     right: 2rem !important;
+    width: 58px !important;
+    height: 58px !important;
+    z-index: 9990 !important;
   }
+
+  .modal-card,
+  #bookingModal > div,
+  #holidayModal > div {
+    max-height: 85vh !important;
+  }
+}
+
+/* 6. Custom Desktop Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94A3B8;
+  border-radius: 9999px;
+  border: 2px solid #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748B;
 }
 
 /* Small iPhone / Android Phone Alignment (<= 380px, e.g. iPhone SE, iPhone mini, Galaxy Fold) */
